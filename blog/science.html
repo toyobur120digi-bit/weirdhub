@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science • WeirdHub Journal</title>
+  <meta name="description" content="Weird science: Quantum biology, impossible physics, and discoveries that break our understanding of reality.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="section" style="padding-top:5rem; background:#f8fafc;">
+    <div class="container">
+      <div style="max-width:720px;">
+        <a href="index.html" style="color:#64748b; font-size:0.9rem;">← Back to Blog</a>
+        <h1 style="margin: 1rem 0 0.5rem;">Science</h1>
+        <p style="font-size:1.1rem;">Physics that breaks intuition. Biology that shouldn't work. Discoveries that rewrite the rules.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="filter-bar">
+        <input type="text" id="search" class="search-input" placeholder="Search science articles...">
+      </div>
+
+      <div class="grid grid-3" id="articles-grid">
+        <!-- Article 1 -->
+        <div class="card article-card" data-title="Quantum Entanglement in Living Bacteria" data-category="science">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/201/600/340" alt="Quantum biology visualization" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-science">Science</span>
+            <h3 class="card-title">Quantum Entanglement Observed in Living Bacteria</h3>
+            <p class="card-excerpt">For the first time, researchers have demonstrated sustained quantum coherence inside living bacterial cells at room temperature — challenging long-held assumptions about biological systems.</p>
+            <div class="card-meta">
+              <span>June 29, 2026 • 22 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="card article-card" data-title="The Immortal Jellyfish" data-category="science">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/48/600/340" alt="Turritopsis dohrnii" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-science">Science</span>
+            <h3 class="card-title">The Immortal Jellyfish That Can Reset Its Biological Age</h3>
+            <p class="card-excerpt">Turritopsis dohrnii can revert from adult medusa back to juvenile polyp. Scientists are now mapping its genome for clues about cellular rejuvenation and biological immortality.</p>
+            <div class="card-meta">
+              <span>June 27, 2026 • 11 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="card article-card" data-title="Why Some People See Sound as Color" data-category="science">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/1005/600/340" alt="Synesthesia visualization" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-science">Science</span>
+            <h3 class="card-title">Why Some People Really Do See Sound as Color</h3>
+            <p class="card-excerpt">Synesthesia has long been treated as a curiosity. New neuroscience suggests it may represent one of the most precise ways certain brains model sensory reality.</p>
+            <div class="card-meta">
+              <span>June 18, 2026 • 22 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal" id="article-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-image" alt="" style="margin-bottom:1.5rem; border:1px solid #e2e8f0; width:100%;">
+        <div id="modal-meta" style="color:#64748b; margin-bottom:1.5rem;"></div>
+        <div id="modal-content-text" style="font-size:1.05rem; line-height:1.8; color:#334155;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/theme.js"></script>
+  <script>
+    // Simple search + modal for science page
+    document.addEventListener('DOMContentLoaded', () => {
+      const search = document.getElementById('search');
+      const grid = document.getElementById('articles-grid');
+      const modal = document.getElementById('article-modal');
+      const closeBtn = document.getElementById('modal-close');
+
+      const articleData = {
+        "Quantum Entanglement in Living Bacteria": {
+          image: "https://picsum.photos/id/201/820/520",
+          meta: "June 29, 2026 • Dr. Kenji Sato • 22 min read",
+          content: "In a groundbreaking experiment published this month, physicists at the University of Tokyo have shown that quantum entanglement can persist inside living bacterial cells at room temperature for several minutes. This challenges the long-standing belief that quantum effects decohere too quickly in warm, wet biological environments to be biologically relevant. The implications for quantum biology and even future quantum computing interfaces with living systems are profound."
+        },
+        "The Immortal Jellyfish That Can Reset Its Biological Age": {
+          image: "https://picsum.photos/id/48/820/520",
+          meta: "June 27, 2026 • Dr. Priya Sen • 11 min read",
+          content: "Turritopsis dohrnii, commonly known as the immortal jellyfish, possesses the remarkable ability to revert from its mature medusa stage back into a juvenile polyp form when stressed or injured. Researchers have now sequenced its genome and identified key genes involved in cellular transdifferentiation. This discovery opens new avenues in regenerative medicine and the study of biological aging reversal."
+        },
+        "Why Some People Really Do See Sound as Color": {
+          image: "https://picsum.photos/id/1005/820/520",
+          meta: "June 18, 2026 • Dr. Kenji Sato • 22 min read",
+          content: "Synesthesia, once dismissed as imagination or exaggeration, is now understood through advanced neuroimaging as a genuine neurological phenomenon where stimulation of one sensory pathway leads to involuntary experiences in another. New studies suggest that synesthetes may actually perceive the world more accurately in certain domains, with their brains creating richer, multi-sensory models of reality."
+        }
+      };
+
+      // Search
+      search.addEventListener('input', () => {
+        const term = search.value.toLowerCase();
+        document.querySelectorAll('.article-card').forEach(card => {
+          const title = card.dataset.title.toLowerCase();
+          card.style.display = title.includes(term) ? '' : 'none';
+        });
+      });
+
+      // Modal
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('.article-card');
+        if (!card) return;
+
+        const title = card.dataset.title;
+        const data = articleData[title];
+        if (!data) return;
+
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-image').src = data.image;
+        document.getElementById('modal-meta').textContent = data.meta;
+        document.getElementById('modal-content-text').innerHTML = `<p>${data.content}</p>`;
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

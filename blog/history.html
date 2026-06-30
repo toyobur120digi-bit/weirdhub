@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History • WeirdHub Journal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="section" style="padding-top:5rem; background:#f8fafc;">
+    <div class="container">
+      <div style="max-width:720px;">
+        <a href="index.html" style="color:#64748b; font-size:0.9rem;">← Back to Blog</a>
+        <h1 style="margin:1rem 0 0.5rem;">History</h1>
+        <p style="font-size:1.1rem;">The parts of the past that official records prefer to forget or cannot explain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid grid-3" id="articles-grid">
+        <div class="card article-card" data-title="Silbo Gomero: The Whistling Language">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/251/600/340" alt="Whistling language" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-history">History</span>
+            <h3 class="card-title">Silbo Gomero: The Whistling Language That Survived Conquest</h3>
+            <p class="card-excerpt">On the Canary Island of La Gomera, a complex whistled form of Spanish is still used to communicate across deep valleys. It is one of the last surviving whistled languages in the world.</p>
+            <div class="card-meta"><span>May 28, 2026 • 14 min</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The Library That Burned Itself Down">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/29/600/340" alt="Ancient library" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-history">History</span>
+            <h3 class="card-title">The Library That Burned Itself Down — Twice</h3>
+            <p class="card-excerpt">The story of the Serapeum of Alexandria's lesser-known sibling and the highly suspicious pattern of fires that destroyed centuries of accumulated knowledge.</p>
+            <div class="card-meta"><span>June 15, 2026 • 31 min</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The 2,000-Year-Old Computer">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/1040/600/340" alt="Antikythera mechanism" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-history">History</span>
+            <h3 class="card-title">The 2,000-Year-Old Computer That Shouldn't Exist</h3>
+            <p class="card-excerpt">New high-resolution X-ray tomography of the Antikythera mechanism has revealed even more gears and functions than previously thought possible for Hellenistic technology.</p>
+            <div class="card-meta"><span>June 20, 2026 • 27 min</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="article-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button class="modal-close" id="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-image" alt="" style="margin-bottom:1.5rem; border:1px solid #e2e8f0; width:100%;">
+        <div id="modal-meta" style="color:#64748b; margin-bottom:1.5rem;"></div>
+        <div id="modal-content-text" style="font-size:1.05rem; line-height:1.8;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/theme.js"></script>
+  <script>
+    // Similar modal logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('articles-grid');
+      const modal = document.getElementById('article-modal');
+      const closeBtn = document.getElementById('modal-close');
+
+      const data = {
+        "Silbo Gomero: The Whistling Language": {
+          image: "https://picsum.photos/id/251/820/520",
+          meta: "May 28, 2026 • Sofia Reyes • 14 min read",
+          content: "Silbo Gomero is a whistled register of Spanish used by inhabitants of La Gomera in the Canary Islands to communicate across the deep ravines and narrow valleys that crisscross the island. It was once in danger of dying out but has been revived and is now taught in schools. It is one of the few remaining whistled languages in the world."
+        },
+        "The Library That Burned Itself Down — Twice": {
+          image: "https://picsum.photos/id/29/820/520",
+          meta: "June 15, 2026 • Dr. Lena Koval • 31 min read",
+          content: "The Serapeum of Alexandria was one of the most important libraries of the ancient world. Historical records show it suffered catastrophic fires on at least two separate occasions under highly suspicious circumstances. The pattern suggests deliberate destruction of knowledge that threatened prevailing powers of the time."
+        },
+        "The 2,000-Year-Old Computer That Shouldn't Exist": {
+          image: "https://picsum.photos/id/1040/820/520",
+          meta: "June 20, 2026 • Marcus Hale • 27 min read",
+          content: "The Antikythera mechanism, recovered from a shipwreck in 1901, is an ancient Greek hand-powered orrery. Recent CT scans have revealed it was far more sophisticated than previously imagined, capable of predicting eclipses and tracking the movements of the planets with remarkable accuracy for its era."
+        }
+      };
+
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('.article-card');
+        if (!card) return;
+        const title = card.dataset.title;
+        const d = data[title];
+        if (!d) return;
+
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-image').src = d.image;
+        document.getElementById('modal-meta').textContent = d.meta;
+        document.getElementById('modal-content-text').innerHTML = `<p>${d.content}</p>`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow = ''; });
+      modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = ''; } });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystery • WeirdHub Journal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="section" style="padding-top:5rem; background:#f8fafc;">
+    <div class="container">
+      <div style="max-width:720px;">
+        <a href="index.html" style="color:#64748b;">← Back to Blog</a>
+        <h1 style="margin:1rem 0 0.5rem;">Mystery</h1>
+        <p style="font-size:1.1rem;">Unexplained phenomena and enigmas that still defy conventional explanation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid grid-3" id="articles-grid">
+        <div class="card article-card" data-title="The Bloop: 25 Years Later">
+          <div class="card-image"><img src="https://picsum.photos/id/160/600/340" alt="Bloop sound" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-mystery">Mystery</span>
+            <h3 class="card-title">The Bloop: 25 Years Later, We Still Don't Know What Made It</h3>
+            <p class="card-excerpt">The loudest underwater sound ever recorded remains unexplained. New theories point to something far stranger than any known marine animal.</p>
+            <div class="card-meta"><span>June 12, 2026 • 18 min</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The Dyatlov Pass Incident">
+          <div class="card-image"><img src="https://picsum.photos/id/133/600/340" alt="Dyatlov Pass" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-mystery">Mystery</span>
+            <h3 class="card-title">The Dyatlov Pass Incident: Frozen in Mystery</h3>
+            <p class="card-excerpt">Nine experienced hikers found dead under inexplicable circumstances in the Ural Mountains in 1959. The official explanation has never satisfied researchers.</p>
+            <div class="card-meta"><span>Classic Case • 25 min</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The Unsolvable Voynich Manuscript">
+          <div class="card-image"><img src="https://picsum.photos/id/29/600/340" alt="Voynich Manuscript" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-mystery">Mystery</span>
+            <h3 class="card-title">The Unsolvable Voynich Manuscript</h3>
+            <p class="card-excerpt">A 15th-century book written in an unknown language that has baffled cryptographers, linguists, and historians for centuries.</p>
+            <div class="card-meta"><span>Classic Case • 19 min</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="article-modal">
+    <div class="modal-content">
+      <div class="modal-header"><h3 id="modal-title"></h3><button class="modal-close" id="modal-close">&times;</button></div>
+      <div class="modal-body">
+        <img id="modal-image" alt="" style="margin-bottom:1.5rem; border:1px solid #e2e8f0; width:100%;">
+        <div id="modal-meta" style="color:#64748b; margin-bottom:1.5rem;"></div>
+        <div id="modal-content-text" style="font-size:1.05rem; line-height:1.8;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/theme.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('articles-grid');
+      const modal = document.getElementById('article-modal');
+      const closeBtn = document.getElementById('modal-close');
+
+      const data = {
+        "The Bloop: 25 Years Later": { image: "https://picsum.photos/id/160/820/520", meta: "June 12, 2026 • Dr. Lena Koval • 18 min read", content: "In 1997, the U.S. Navy recorded the loudest underwater sound ever detected. For decades it was attributed to icequakes, but new analysis of the waveform and frequency suggests it may have been something far more unusual — possibly biological in origin, but unlike any known creature." },
+        "The Dyatlov Pass Incident: Frozen in Mystery": { image: "https://picsum.photos/id/133/820/520", meta: "Classic Case • 25 min read", content: "In February 1959, nine Soviet hikers died under mysterious circumstances in the Ural Mountains. Their tent was cut open from the inside, they fled barefoot into sub-zero temperatures, and some suffered injuries consistent with a violent force. The official explanation of an 'avalanche' has never been widely accepted." },
+        "The Unsolvable Voynich Manuscript": { image: "https://picsum.photos/id/29/820/520", meta: "Classic Case • 19 min read", content: "The Voynich Manuscript is an illustrated codex hand-written in an unknown writing system. Carbon dating places it in the early 15th century. Despite centuries of study by the world's best cryptographers, it remains completely undeciphered. Some believe it is a hoax; others insist it holds profound lost knowledge." }
+      };
+
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('.article-card');
+        if (!card) return;
+        const title = card.dataset.title;
+        const d = data[title];
+        if (!d) return;
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-image').src = d.image;
+        document.getElementById('modal-meta').textContent = d.meta;
+        document.getElementById('modal-content-text').innerHTML = `<p>${d.content}</p>`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow = ''; });
+      modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = ''; } });
+    });
+  </script>
+</body>
+</html>

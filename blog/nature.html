@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nature • WeirdHub Journal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="section" style="padding-top:5rem; background:#f8fafc;">
+    <div class="container">
+      <div style="max-width:720px;">
+        <a href="index.html" style="color:#64748b;">← Back to Blog</a>
+        <h1 style="margin:1rem 0 0.5rem;">Nature</h1>
+        <p style="font-size:1.1rem;">Bizarre biology, impossible geology, and nature's strangest secrets.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid grid-3" id="articles-grid">
+        <div class="card article-card" data-title="Blood Falls of Antarctica">
+          <div class="card-image"><img src="https://picsum.photos/id/160/600/340" alt="Blood Falls" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-nature">Nature</span>
+            <h3 class="card-title">Blood Falls of Antarctica</h3>
+            <p class="card-excerpt">A waterfall that flows bright red from an ancient subglacial lake, stained by iron-rich water that has been isolated for millions of years.</p>
+            <div class="card-meta"><span>Classic • 9 min</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The Immortal Jellyfish">
+          <div class="card-image"><img src="https://picsum.photos/id/48/600/340" alt="Immortal Jellyfish" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-nature">Nature</span>
+            <h3 class="card-title">The Immortal Jellyfish That Can Reset Its Age</h3>
+            <p class="card-excerpt">Turritopsis dohrnii can revert from its adult form back to a juvenile polyp when stressed, effectively making it biologically immortal.</p>
+            <div class="card-meta"><span>June 27, 2026 • 11 min</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The Sound Garden">
+          <div class="card-image"><img src="https://picsum.photos/id/133/600/340" alt="Sound Garden plants" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-nature">Nature</span>
+            <h3 class="card-title">The Sound Garden: Plants That Make Music</h3>
+            <p class="card-excerpt">A permanent installation where the bioelectric signals of living plants are translated in real time into haunting, evolving musical compositions.</p>
+            <div class="card-meta"><span>2023 • Permanent</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="article-modal">
+    <div class="modal-content">
+      <div class="modal-header"><h3 id="modal-title"></h3><button class="modal-close" id="modal-close">&times;</button></div>
+      <div class="modal-body">
+        <img id="modal-image" alt="" style="margin-bottom:1.5rem; border:1px solid #e2e8f0; width:100%;">
+        <div id="modal-meta" style="color:#64748b; margin-bottom:1.5rem;"></div>
+        <div id="modal-content-text" style="font-size:1.05rem; line-height:1.8;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/theme.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('articles-grid');
+      const modal = document.getElementById('article-modal');
+      const closeBtn = document.getElementById('modal-close');
+
+      const data = {
+        "Blood Falls of Antarctica": { image: "https://picsum.photos/id/160/820/520", meta: "Classic Phenomenon • 9 min read", content: "Blood Falls is a waterfall in Antarctica that flows with bright red liquid. The red color comes from iron oxide in the water, which has been trapped under the glacier for over 2 million years. The water is so salty it remains liquid at temperatures well below freezing." },
+        "The Immortal Jellyfish That Can Reset Its Age": { image: "https://picsum.photos/id/48/820/520", meta: "June 27, 2026 • Dr. Priya Sen • 11 min read", content: "Turritopsis dohrnii is capable of reverting from its mature medusa stage back into a juvenile polyp form. This process, called transdifferentiation, allows it to bypass death and start its life cycle over again. Scientists are studying its genome for clues about aging reversal." },
+        "The Sound Garden: Plants That Make Music": { image: "https://picsum.photos/id/133/820/520", meta: "2023 • Permanent Installation", content: "In this public garden installation, sensitive electrodes attached to living plants translate their bioelectric activity into complex, evolving soundscapes. The music changes with light, humidity, and the plants' own biological rhythms, giving non-human organisms a literal voice." }
+      };
+
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('.article-card');
+        if (!card) return;
+        const title = card.dataset.title;
+        const d = data[title];
+        if (!d) return;
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-image').src = d.image;
+        document.getElementById('modal-meta').textContent = d.meta;
+        document.getElementById('modal-content-text').innerHTML = `<p>${d.content}</p>`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow = ''; });
+      modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = ''; } });
+    });
+  </script>
+</body>
+</html>

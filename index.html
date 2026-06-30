@@ -1,210 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WeirdHub - Discover the world's weirdest stories, mysterious places, strange history, bizarre science and unbelievable facts.">
-    <title>WeirdHub | Discover the World's Weirdest Stories</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>WeirdHub • Discover the Weird &amp; Wonderful</title>
+  <meta name="description" content="WeirdHub is the premier destination for curated strange stories, odd projects, and wonderfully weird ideas. Explore bizarre science, forgotten history, and curious creations.">
+  <meta name="keywords" content="weird, strange, curious, bizarre, science, history, projects, stories, oddities, unexplained">
+  <link rel="canonical" href="https://weirdhub.dev/">
+  
+  <meta property="og:title" content="WeirdHub • Discover the Weird &amp; Wonderful">
+  <meta property="og:description" content="Curated stories, projects, and ideas that defy the ordinary. A premium home for curious minds.">
+  <meta property="og:image" content="https://picsum.photos/id/1015/1200/630">
+  <meta property="og:url" content="https://weirdhub.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WeirdHub">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WeirdHub • Discover the Weird &amp; Wonderful">
+  <meta name="twitter:description" content="Curated strange stories, odd projects, and wonderfully weird ideas.">
+  <meta name="twitter:image" content="https://picsum.photos/id/1015/1200/630">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230ea5e9'/%3E%3Ctext x='8' y='23' fill='white' font-size='18' font-weight='800'%3EWH%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-    <!-- Sticky Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <div class="logo">
-                    <span class="logo-text">WeirdHub</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#" class="nav-link active">Home</a></li>
-                    <li><a href="#" class="nav-link">Weird Facts</a></li>
-                    <li><a href="#" class="nav-link">Mysteries</a></li>
-                    <li><a href="#" class="nav-link">Strange History</a></li>
-                    <li><a href="#" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <div id="navbar"></div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-            <div class="hero-text">
-                <h1 class="hero-heading">Discover the World's<br>Weirdest Stories</h1>
-                <p class="hero-subtitle">Explore mysterious places, unbelievable facts, forgotten history, bizarre science, and incredible discoveries.</p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">Explore Articles</a>
-                    <a href="#" class="btn btn-secondary">Latest Stories</a>
-                </div>
-            </div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="grid grid-2" style="align-items: center; gap: 4rem;">
+        <div class="hero-content">
+          <h1>Things that<br>shouldn't exist.<br>But do.</h1>
+          <p>WeirdHub is the definitive archive of the strange, the inexplicable, and the beautifully bizarre. Hand-curated for those who find the ordinary deeply unsatisfying.</p>
+          
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary btn-lg">Explore Projects</a>
+            <a href="/blog/index.html" class="btn btn-secondary btn-lg">Read the Journal</a>
+          </div>
+          
+          <p style="margin-top: 2rem; font-size: 0.875rem; color: #64748b;">
+            12,847 curious minds • 483 published oddities • Updated daily
+          </p>
         </div>
-    </section>
+        
+        <div class="hero-image">
+          <img src="https://picsum.photos/id/1015/920/720" 
+               alt="Surreal landscape with impossible geometry and vivid colors representing the weird and wonderful" 
+               loading="eager" width="920" height="720">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Featured Categories -->
-    <section class="categories section">
-        <div class="container">
-            <h2 class="section-title">Featured Categories</h2>
-            <div class="categories-grid">
-                <!-- Category 1 -->
-                <div class="category-card">
-                    <div class="category-icon">🧠</div>
-                    <h3>Weird Facts</h3>
-                    <p>Mind-bending truths that defy logic</p>
-                </div>
-                <!-- Category 2 -->
-                <div class="category-card">
-                    <div class="category-icon">🌌</div>
-                    <h3>Mysteries</h3>
-                    <p>Unexplained phenomena and enigmas</p>
-                </div>
-                <!-- Category 3 -->
-                <div class="category-card">
-                    <div class="category-icon">🏛️</div>
-                    <h3>Ancient History</h3>
-                    <p>Lost civilizations and forgotten lore</p>
-                </div>
-                <!-- Category 4 -->
-                <div class="category-card">
-                    <div class="category-icon">🏔️</div>
-                    <h3>Strange Places</h3>
-                    <p>Eerie locations around the globe</p>
-                </div>
-                <!-- Category 5 -->
-                <div class="category-card">
-                    <div class="category-icon">🔬</div>
-                    <h3>Bizarre Science</h3>
-                    <p>Science that sounds like fiction</p>
-                </div>
-                <!-- Category 6 -->
-                <div class="category-card">
-                    <div class="category-icon">🌀</div>
-                    <h3>Curiosities</h3>
-                    <p>Oddities from every corner of the world</p>
-                </div>
-            </div>
+  <!-- INTRODUCTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What is WeirdHub?</h2>
+        <p>We believe the world is far stranger than most institutions admit. We collect, verify, and present the most compelling anomalies in science, history, nature, and human creativity — without sensationalism or fluff.</p>
+      </div>
+      
+      <div class="grid grid-3" style="max-width: 1100px; margin: 0 auto;">
+        <div class="card">
+          <div class="card-content">
+            <h3 style="margin-bottom: 0.75rem;">Meticulously Curated</h3>
+            <p>Every story and project is researched, fact-checked, and edited by our small team of writers, historians, and scientists. No AI slop. No clickbait.</p>
+          </div>
         </div>
-    </section>
+        <div class="card">
+          <div class="card-content">
+            <h3 style="margin-bottom: 0.75rem;">Beautifully Strange</h3>
+            <p>We celebrate the elegant weird — the things that make you pause and reconsider what you thought you knew about reality.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h3 style="margin-bottom: 0.75rem;">For the Curious</h3>
+            <p>Whether you're a researcher, creator, or simply someone who stares at the sky too long, this is your place.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Featured Articles -->
-    <section class="articles section">
-        <div class="container">
-            <h2 class="section-title">Featured Stories</h2>
-            <div class="articles-grid">
-                <!-- Article 1 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://picsum.photos/id/1015/600/400" alt="Dyatlov Pass">
-                        <span class="category-badge">Mysteries</span>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title">The Dyatlov Pass Incident: Frozen in Mystery</h3>
-                        <p class="article-desc">Nine experienced hikers found dead under inexplicable circumstances in the Ural Mountains.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-                
-                <!-- Article 2 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://picsum.photos/id/133/600/400" alt="Voynich">
-                        <span class="category-badge">Curiosities</span>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title">The Unsolvable Voynich Manuscript</h3>
-                        <p class="article-desc">A 15th-century book written in an unknown language that has baffled cryptographers for centuries.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-                
-                <!-- Article 3 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://picsum.photos/id/201/600/400" alt="Tartaria">
-                        <span class="category-badge">Strange History</span>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title">The Mud Flood and Tartaria Conspiracy</h3>
-                        <p class="article-desc">Did an advanced civilization get buried under layers of mud just a few centuries ago?</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-                
-                <!-- Article 4 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://picsum.photos/id/251/600/400" alt="Bloop">
-                        <span class="category-badge">Weird Facts</span>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title">The Bloop: Ocean's Terrifying Sound</h3>
-                        <p class="article-desc">A massive underwater sound detected in 1997 that remains one of the ocean's greatest mysteries.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-                
-                <!-- Article 5 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://picsum.photos/id/316/600/400" alt="Antarctica">
-                        <span class="category-badge">Strange Places</span>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title">Blood Falls of Antarctica</h3>
-                        <p class="article-desc">A waterfall that flows bright red from an ancient subglacial lake.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
-                
-                <!-- Article 6 -->
-                <div class="article-card">
-                    <div class="article-image">
-                        <img src="https://picsum.photos/id/367/600/400" alt="Quantum">
-                        <span class="category-badge">Bizarre Science</span>
-                    </div>
-                    <div class="article-content">
-                        <h3 class="article-title">Quantum Immortality: Are You Already Dead?</h3>
-                        <p class="article-desc">The wild theory from quantum mechanics that suggests consciousness never experiences its own end.</p>
-                        <a href="#" class="read-more">Read More →</a>
-                    </div>
-                </div>
+  <!-- FEATURED CONTENT -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Featured This Month</h2>
+        <p>Standout stories and projects our editors couldn't stop thinking about.</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <a href="blog.html" class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/160/600/340" alt="The Bloop: The mysterious ultra-low frequency sound recorded in the Pacific" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-mystery" style="margin-bottom: 1rem;">Mystery</span>
+            <h3 class="card-title">The Bloop: 25 Years Later, We Still Don't Know What Made It</h3>
+            <p class="card-excerpt">The loudest underwater sound ever recorded remains unexplained. New theories point to something far stranger than any known marine animal.</p>
+            <div class="card-meta">
+              <span>June 12, 2026</span>
+              <span>18 min read</span>
             </div>
-        </div>
-    </section>
+          </div>
+        </a>
+        
+        <a href="projects.html" class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/201/600/340" alt="Chrono Cabinet: A 500-year time capsule project" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-technology" style="margin-bottom: 1rem;">Technology</span>
+            <h3 class="card-title">The Chrono Cabinet: A Physical Object Designed to Outlive Civilization</h3>
+            <p class="card-excerpt">Built from titanium, ceramic, and synthetic sapphire, this device is engineered to survive 500 years and still be readable by future humans.</p>
+            <div class="card-meta">
+              <span>Ongoing since 2024</span>
+              <span>Project</span>
+            </div>
+          </div>
+        </a>
+        
+        <a href="blog.html" class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/251/600/340" alt="The language that only 8 people speak fluently" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-history" style="margin-bottom: 1rem;">History</span>
+            <h3 class="card-title">Silbo Gomero: The Whistling Language That Survived Conquest</h3>
+            <p class="card-excerpt">On the island of La Gomera, people still communicate across valleys using a complex whistled form of Spanish. It's one of the last of its kind.</p>
+            <div class="card-meta">
+              <span>May 28, 2026</span>
+              <span>14 min read</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Newsletter -->
-    <section class="newsletter section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2 class="newsletter-title">Stay Curious</h2>
-                <p class="newsletter-subtitle">Get the strangest stories delivered straight to your inbox every week.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="your@email.com" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-                <p class="newsletter-note">Join 12,458 curious minds. Unsubscribe anytime.</p>
-            </div>
+  <!-- LATEST CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+        <div>
+          <h2 style="margin-bottom: 0.25rem;">Latest Discoveries</h2>
+          <p style="color: #64748b; margin: 0;">Fresh from the archive this week.</p>
         </div>
-    </section>
+        <a href="blog.html" class="btn btn-secondary">View All Articles →</a>
+      </div>
+      
+      <div class="grid grid-4">
+        <div class="card">
+          <div class="card-content">
+            <span class="tag tag-science" style="margin-bottom: 0.85rem;">Science</span>
+            <h3 class="card-title" style="font-size:1.05rem;">Quantum Entanglement Observed in Living Bacteria</h3>
+            <p class="card-excerpt" style="font-size:0.9rem;">For the first time, scientists have demonstrated quantum coherence inside a living organism at room temperature.</p>
+            <div class="card-meta" style="font-size:0.75rem;">
+              <span>June 29, 2026</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <span class="tag tag-nature" style="margin-bottom: 0.85rem;">Nature</span>
+            <h3 class="card-title" style="font-size:1.05rem;">The Immortal Jellyfish That Can Reset Its Age</h3>
+            <p class="card-excerpt" style="font-size:0.9rem;">Turritopsis dohrnii can revert from adult to juvenile form. Researchers are now studying its genome for clues about biological immortality.</p>
+            <div class="card-meta" style="font-size:0.75rem;">
+              <span>June 27, 2026</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <span class="tag tag-art" style="margin-bottom: 0.85rem;">Art</span>
+            <h3 class="card-title" style="font-size:1.05rem;">The Artist Who Paints With Bacteria</h3>
+            <p class="card-excerpt" style="font-size:0.9rem;">Using living microorganisms as pigment, this bio-artist creates portraits that evolve and eventually die over weeks.</p>
+            <div class="card-meta" style="font-size:0.75rem;">
+              <span>June 24, 2026</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <span class="tag tag-mystery" style="margin-bottom: 0.85rem;">Mystery</span>
+            <h3 class="card-title" style="font-size:1.05rem;">The 2,000-Year-Old Computer That Shouldn't Exist</h3>
+            <p class="card-excerpt" style="font-size:0.9rem;">The Antikythera mechanism remains the most sophisticated geared device from antiquity. New X-ray scans reveal even more complexity.</p>
+            <div class="card-meta" style="font-size:0.75rem;">
+              <span>June 20, 2026</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">WeirdHub</span>
-                </div>
-                <div class="footer-links">
-                    <a href="#">About</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Contact</a>
-                </div>
-                <div class="copyright">
-                    &copy; 2026 WeirdHub. All rights reserved.
-                </div>
-            </div>
+  <!-- CATEGORIES -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Browse by Category</h2>
+        <p>Every weird thing has a home here.</p>
+      </div>
+      
+      <div class="grid grid-4">
+        <a href="projects.html" class="card" style="text-align:center; padding:2.5rem 1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:1rem;">🧪</div>
+          <h3 style="margin-bottom:0.5rem;">Science</h3>
+          <p style="font-size:0.9rem; margin:0;">Physics that breaks intuition. Biology that shouldn't work. Chemistry that feels like magic.</p>
+        </a>
+        <a href="projects.html" class="card" style="text-align:center; padding:2.5rem 1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:1rem;">⚙️</div>
+          <h3 style="margin-bottom:0.5rem;">Technology</h3>
+          <p style="font-size:0.9rem; margin:0;">Inventions too strange for most labs. Machines that feel almost alive. Code that shouldn't run.</p>
+        </a>
+        <a href="blog.html" class="card" style="text-align:center; padding:2.5rem 1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:1rem;">📜</div>
+          <h3 style="margin-bottom:0.5rem;">History</h3>
+          <p style="font-size:0.9rem; margin:0;">Events, artifacts, and people that official records prefer to forget or cannot explain.</p>
+        </a>
+        <a href="projects.html" class="card" style="text-align:center; padding:2.5rem 1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:1rem;">🌿</div>
+          <h3 style="margin-bottom:0.5rem;">Nature</h3>
+          <p style="font-size:0.9rem; margin:0;">Phenomena, creatures, and ecosystems that remind us how little we truly understand about our planet.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2rem; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="margin-bottom:0.25rem;">Featured Projects</h2>
+          <p style="color:#64748b; margin:0;">Real people building impossible things.</p>
         </div>
-    </footer>
+        <a href="projects.html" class="btn btn-secondary">See All Projects →</a>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/133/600/340" alt="The Whispering Gallery installation" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-art">Art</span>
+            <h3 class="card-title">The Whispering Gallery</h3>
+            <p class="card-excerpt">An architectural installation where spoken secrets travel through walls and return transformed hours later.</p>
+            <div class="card-meta">
+              <span>By Elena Voss</span>
+              <span>Active</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/40/600/340" alt="Bioluminescent garden prototype" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-nature">Nature</span>
+            <h3 class="card-title">Bioluminescent Garden Kit</h3>
+            <p class="card-excerpt">A DIY kit that lets anyone grow plants that emit soft blue-green light using engineered bacteria.</p>
+            <div class="card-meta">
+              <span>By Dr. Marcus Hale</span>
+              <span>Prototype</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-image">
+            <img src="https://picsum.photos/id/1040/600/340" alt="The Odditorium crowdsourced map" loading="lazy">
+          </div>
+          <div class="card-content">
+            <span class="tag tag-mystery">Mystery</span>
+            <h3 class="card-title">The Odditorium Map</h3>
+            <p class="card-excerpt">A living, crowdsourced atlas of locations where strange phenomena have been reliably documented.</p>
+            <div class="card-meta">
+              <span>Community Project</span>
+              <span>12k entries</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section class="section-alt">
+    <div class="container">
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:2rem; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="margin-bottom:0.25rem;">From the Journal</h2>
+          <p style="color:#64748b; margin:0;">Deep dives into the peculiar.</p>
+        </div>
+        <a href="blog.html" class="btn btn-secondary">Browse All Articles →</a>
+      </div>
+      
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="card-content">
+            <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem;">
+              <span class="tag tag-science">Science</span>
+              <span style="font-size:0.8rem; color:#64748b;">June 18, 2026 • 22 min</span>
+            </div>
+            <h3 class="card-title">Why Some People Really Do See Sound as Color</h3>
+            <p class="card-excerpt">Synesthesia is often dismissed as imagination. New neuroscience suggests it may be one of the most accurate ways some brains model reality.</p>
+            <a href="blog.html" class="btn btn-secondary" style="margin-top:auto; align-self:flex-start; padding:0.6rem 1.2rem; font-size:0.875rem;">Read Article</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-content">
+            <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1rem;">
+              <span class="tag tag-history">History</span>
+              <span style="font-size:0.8rem; color:#64748b;">June 15, 2026 • 31 min</span>
+            </div>
+            <h3 class="card-title">The Library That Burned Itself Down — Twice</h3>
+            <p class="card-excerpt">The story of the Great Library of Alexandria's lesser-known sibling and the suspicious pattern of fires that destroyed centuries of knowledge.</p>
+            <a href="blog.html" class="btn btn-secondary" style="margin-top:auto; align-self:flex-start; padding:0.6rem 1.2rem; font-size:0.875rem;">Read Article</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT TEASER + CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2" style="align-items:center; gap:4rem;">
+        <div>
+          <h2 style="margin-bottom:1.25rem;">Weird is not a flaw.<br>It’s a feature.</h2>
+          <p style="font-size:1.05rem;">WeirdHub exists because most platforms optimize for the average. We optimize for the edges — the questions that keep you awake at 3 a.m., the phenomena that don't fit neatly into textbooks, the creations that feel slightly illegal.</p>
+          <p>Our small, independent team believes the most valuable knowledge often lives in the margins.</p>
+          
+          <div style="margin-top:2rem;">
+            <a href="about.html" class="btn btn-primary">Learn About Our Mission</a>
+          </div>
+        </div>
+        
+        <div class="card" style="padding:2.5rem; background:#f8fafc;">
+          <h3 style="margin-bottom:1.5rem;">Join 12,847 curious minds</h3>
+          <ul style="list-style:none; padding:0; margin:0; font-size:1rem; line-height:2.1;">
+            <li style="display:flex; align-items:center; gap:0.75rem;">→ Weekly digest of the strangest verified discoveries</li>
+            <li style="display:flex; align-items:center; gap:0.75rem;">→ Early access to new projects and research</li>
+            <li style="display:flex; align-items:center; gap:0.75rem;">→ Private community of researchers &amp; creators</li>
+            <li style="display:flex; align-items:center; gap:0.75rem;">→ Ability to submit your own findings</li>
+          </ul>
+          <a href="contact.html" class="btn btn-accent" style="margin-top:2rem; width:100%;">Become a Member</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/theme.js"></script>
 </body>
 </html>

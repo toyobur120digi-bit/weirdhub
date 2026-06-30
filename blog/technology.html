@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology • WeirdHub Journal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="section" style="padding-top:5rem; background:#f8fafc;">
+    <div class="container">
+      <div style="max-width:720px;">
+        <a href="index.html" style="color:#64748b;">← Back to Blog</a>
+        <h1 style="margin:1rem 0 0.5rem;">Technology</h1>
+        <p style="font-size:1.1rem;">Inventions too strange for most labs and machines that feel almost alive.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid grid-3" id="articles-grid">
+        <div class="card article-card" data-title="The Chrono Cabinet">
+          <div class="card-image"><img src="https://picsum.photos/id/201/600/340" alt="Time capsule" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-technology">Technology</span>
+            <h3 class="card-title">The Chrono Cabinet: A 500-Year Time Capsule</h3>
+            <p class="card-excerpt">Built from titanium, ceramic, and synthetic sapphire, this device is engineered to survive 500 years and still be readable by future humans or whatever comes after.</p>
+            <div class="card-meta"><span>Ongoing since 2024</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="Quantum Dice">
+          <div class="card-image"><img src="https://picsum.photos/id/160/600/340" alt="Quantum device" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-technology">Technology</span>
+            <h3 class="card-title">Quantum Dice: True Randomness for Life Decisions</h3>
+            <p class="card-excerpt">A palm-sized device that uses quantum vacuum fluctuations to generate truly random numbers for high-stakes personal decisions where conventional probability feels insufficient.</p>
+            <div class="card-meta"><span>340 devices shipped</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="Memory Palace OS">
+          <div class="card-image"><img src="https://picsum.photos/id/29/600/340" alt="Spatial OS" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-technology">Technology</span>
+            <h3 class="card-title">Memory Palace OS: Spatial Computing for Memory</h3>
+            <p class="card-excerpt">An experimental operating system that organizes information using the ancient method of loci, turning abstract data into navigable architectural spaces.</p>
+            <div class="card-meta"><span>Alpha Release</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="article-modal">
+    <div class="modal-content">
+      <div class="modal-header"><h3 id="modal-title"></h3><button class="modal-close" id="modal-close">&times;</button></div>
+      <div class="modal-body">
+        <img id="modal-image" alt="" style="margin-bottom:1.5rem; border:1px solid #e2e8f0; width:100%;">
+        <div id="modal-meta" style="color:#64748b; margin-bottom:1.5rem;"></div>
+        <div id="modal-content-text" style="font-size:1.05rem; line-height:1.8;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/theme.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('articles-grid');
+      const modal = document.getElementById('article-modal');
+      const closeBtn = document.getElementById('modal-close');
+
+      const data = {
+        "The Chrono Cabinet": { image: "https://picsum.photos/id/201/820/520", meta: "Ongoing since 2024 • Marcus Hale", content: "The Chrono Cabinet is a physical time capsule engineered with materials and sealing techniques intended to survive 500 years of environmental stress. It contains analog artifacts, encrypted digital archives, and recovery instructions written for multiple possible future technological scenarios." },
+        "Quantum Dice: True Randomness for Life Decisions": { image: "https://picsum.photos/id/160/820/520", meta: "340 devices shipped • Dr. Kenji Sato", content: "This palm-sized device harnesses quantum vacuum fluctuations to generate true randomness. Users report using it for major life decisions where conventional probability feels inadequate. It gives physical form to the philosophical question of whether true randomness exists and whether we should trust it with our lives." },
+        "Memory Palace OS: Spatial Computing for Memory": { image: "https://picsum.photos/id/29/820/520", meta: "Alpha Release • Theo Brandt", content: "Memory Palace OS is an experimental spatial operating system that reimagines file management using the ancient 'method of loci'. Information is placed inside navigable 3D architectural environments, making abstract data memorable through spatial association and reviving pre-digital cognitive techniques." }
+      };
+
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('.article-card');
+        if (!card) return;
+        const title = card.dataset.title;
+        const d = data[title];
+        if (!d) return;
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-image').src = d.image;
+        document.getElementById('modal-meta').textContent = d.meta;
+        document.getElementById('modal-content-text').innerHTML = `<p>${d.content}</p>`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow = ''; });
+      modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = ''; } });
+    });
+  </script>
+</body>
+</html>

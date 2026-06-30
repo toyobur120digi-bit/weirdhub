@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art • WeirdHub Journal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <div id="navbar"></div>
+
+  <section class="section" style="padding-top:5rem; background:#f8fafc;">
+    <div class="container">
+      <div style="max-width:720px;">
+        <a href="index.html" style="color:#64748b;">← Back to Blog</a>
+        <h1 style="margin:1rem 0 0.5rem;">Art</h1>
+        <p style="font-size:1.1rem;">Bio-art, impossible architecture, and creations that blur genius and madness.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="grid grid-3" id="articles-grid">
+        <div class="card article-card" data-title="The Whispering Gallery">
+          <div class="card-image"><img src="https://picsum.photos/id/133/600/340" alt="Whispering Gallery" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-art">Art</span>
+            <h3 class="card-title">The Whispering Gallery</h3>
+            <p class="card-excerpt">An architectural installation where spoken secrets travel through walls and return transformed hours later in a ghostly, altered state.</p>
+            <div class="card-meta"><span>2025 • Permanent</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The Artist Who Paints With Bacteria">
+          <div class="card-image"><img src="https://picsum.photos/id/251/600/340" alt="Bio-art with bacteria" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-art">Art</span>
+            <h3 class="card-title">The Artist Who Paints With Living Bacteria</h3>
+            <p class="card-excerpt">Using carefully cultivated microorganisms as pigment, bio-artist Mira Sol creates portraits that slowly change color and eventually die over weeks.</p>
+            <div class="card-meta"><span>June 24, 2026 • 16 min</span></div>
+          </div>
+        </div>
+
+        <div class="card article-card" data-title="The Living Archive">
+          <div class="card-image"><img src="https://picsum.photos/id/29/600/340" alt="Living books" loading="lazy"></div>
+          <div class="card-content">
+            <span class="tag tag-art">Art</span>
+            <h3 class="card-title">The Living Archive: Books That Grow and Change</h3>
+            <p class="card-excerpt">Books whose pages are grown from living plant tissue and symbiotic microorganisms. The content slowly evolves over months in response to the reader and environment.</p>
+            <div class="card-meta"><span>2024 • Exhibition</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="article-modal">
+    <div class="modal-content">
+      <div class="modal-header"><h3 id="modal-title"></h3><button class="modal-close" id="modal-close">&times;</button></div>
+      <div class="modal-body">
+        <img id="modal-image" alt="" style="margin-bottom:1.5rem; border:1px solid #e2e8f0; width:100%;">
+        <div id="modal-meta" style="color:#64748b; margin-bottom:1.5rem;"></div>
+        <div id="modal-content-text" style="font-size:1.05rem; line-height:1.8;"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="../js/header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/theme.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.getElementById('articles-grid');
+      const modal = document.getElementById('article-modal');
+      const closeBtn = document.getElementById('modal-close');
+
+      const data = {
+        "The Whispering Gallery": { image: "https://picsum.photos/id/133/820/520", meta: "2025 • Elena Voss • Permanent Installation", content: "Built inside a disused industrial corridor, the Whispering Gallery uses carefully tuned acoustic architecture to capture spoken words, carry them through hidden channels, and return them hours later transformed. Visitors describe the experience as deeply unsettling and strangely intimate." },
+        "The Artist Who Paints With Living Bacteria": { image: "https://picsum.photos/id/251/820/520", meta: "June 24, 2026 • Sofia Reyes • 16 min read", content: "Bio-artist Mira Sol uses living microorganisms as her pigment. The portraits she creates slowly change color over weeks as the bacteria grow, interact, and eventually die. Decay becomes an intentional part of the artwork." },
+        "The Living Archive: Books That Grow and Change": { image: "https://picsum.photos/id/29/820/520", meta: "2024 • Collective M • Exhibition", content: "This project creates books whose pages are living tissue grown from plants and symbiotic microorganisms. The content of each book slowly changes over months as the living pages respond to light, humidity, and reader interaction through biological processes." }
+      };
+
+      grid.addEventListener('click', (e) => {
+        const card = e.target.closest('.article-card');
+        if (!card) return;
+        const title = card.dataset.title;
+        const d = data[title];
+        if (!d) return;
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-image').src = d.image;
+        document.getElementById('modal-meta').textContent = d.meta;
+        document.getElementById('modal-content-text').innerHTML = `<p>${d.content}</p>`;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => { modal.classList.remove('active'); document.body.style.overflow = ''; });
+      modal.addEventListener('click', (e) => { if (e.target === modal) { modal.classList.remove('active'); document.body.style.overflow = ''; } });
+    });
+  </script>
+</body>
+</html>
