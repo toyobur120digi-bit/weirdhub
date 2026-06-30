@@ -1,0 +1,231 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&display=swap');
+
+:root {
+    --bg: #f8f1e9;
+    --card-bg: #ffffff;
+    --accent: #c026d3;
+    --text: #2c2522;
+    --text-light: #6b5f56;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif Bengali', 'Noto Serif', Georgia, serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 4rem 0 3rem;
+    background: linear-gradient(to bottom, #f8f1e9, #f4e9dc);
+}
+
+.main-name {
+    font-size: clamp(3rem, 8vw, 4.8rem);
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    font-size: 1.35rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Sections */
+.section {
+    padding: 3.5rem 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* Square Gallery */
+.square-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.image-card {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: border-color .2s ease;
+}
+
+.image-card:hover {
+    border-color: #cfcfcf;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Poll Section */
+.poll {
+    background: #f4e9dc;
+}
+
+.poll-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 3rem 2.5rem;
+    /* border-radius: 24px; */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.poll-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.poll-question {
+    font-size: 1.65rem;
+    line-height: 1.4;
+    margin-bottom: 2.5rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.poll-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.poll-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    height: 110px;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    /* border-radius: 9999px; */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.poll-btn:hover {
+    filter: brightness(0.96);
+}
+
+/* Different colors for scores */
+.score-20 {
+    background: linear-gradient(135deg, #f87171, #ef4444);
+}
+.score-30 {
+    background: linear-gradient(135deg, #fb923c, #f97316);
+}
+.score-50 {
+    background: linear-gradient(135deg, #facc15, #eab308);
+    color: #3f2e1e;
+}
+.score-70 {
+    background: linear-gradient(135deg, #4ade80, #22c55e);
+}
+.score-100 {
+    background: linear-gradient(135deg, #34d399, #10b981);
+}
+
+.poll-note {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* More Photos Grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+}
+
+.photo-card {
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    transition: border-color .2s ease;
+}
+
+.photo-card:hover {
+    border-color: #cfcfcf;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    background: #2c2522;
+    color: #d1c7b8;
+    text-align: center;
+    padding: 2.5rem 0;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-name {
+        font-size: 2.8rem;
+    }
+    
+    .poll-btn {
+        width: 90px;
+        height: 90px;
+        font-size: 1.7rem;
+    }
+    
+    .poll-options {
+        gap: 0.85rem;
+    }
+    
+    .square-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .poll-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .poll-question {
+        font-size: 1.4rem;
+    }
+}
