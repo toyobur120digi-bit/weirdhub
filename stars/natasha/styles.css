@@ -1,0 +1,134 @@
+/* styles-detail.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a14;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.back-btn {
+    color: #ff4081;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.back-btn:hover {
+    color: #ff80ab;
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+}
+
+.hero {
+    margin: 40px 0 50px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bio-section,
+.gallery-section,
+.facts-section {
+    margin-bottom: 70px;
+}
+
+h2 {
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+    color: #ff4081;
+    border-left: 5px solid #ff4081;
+    padding-left: 18px;
+}
+
+.bio-section p {
+    font-size: 1.15rem;
+    color: #d0d0e0;
+    margin-bottom: 18px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.04);
+}
+
+.facts-section ul {
+    list-style: none;
+    background: #16161f;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.facts-section li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 1.1rem;
+}
+
+.facts-section li:last-child {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 0;
+    color: #666;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .gallery-grid img {
+        height: 260px;
+    }
+}

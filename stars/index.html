@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover your favorite stars - Actresses and Celebrities">
+    <title>Stars | WeirdHub</title>
+    <link rel="canonical" href="https://weirdhub.site/stars/">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>WeirdHub <span class="highlight">Stars</span></h1>
+            <p class="tagline">Explore the most talented and beautiful actresses from around the world</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="stars-grid" id="stars-grid">
+                <!-- Stars populated by JS -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 WeirdHub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const stars = [
+            { name: "Natasha Makcova", image: "https://picsum.photos/id/1011/600/600", link: "natasha/" },
+            { name: "Margot Robbie", image: "https://picsum.photos/id/1027/600/600", link: "margot-robbie/" },
+            { name: "Zendaya", image: "https://picsum.photos/id/1005/600/600", link: "zendaya/" },
+            { name: "Gal Gadot", image: "https://picsum.photos/id/1012/600/600", link: "gal-gadot/" },
+            { name: "Emma Watson", image: "https://picsum.photos/id/1025/600/600", link: "emma-watson/" },
+            { name: "Jennifer Lawrence", image: "https://picsum.photos/id/1009/600/600", link: "jennifer-lawrence/" },
+            { name: "Anya Taylor-Joy", image: "https://picsum.photos/id/102/600/600", link: "anya-taylor-joy/" },
+            { name: "Florence Pugh", image: "https://picsum.photos/id/201/600/600", link: "florence-pugh/" },
+            { name: "Sydney Sweeney", image: "https://picsum.photos/id/1003/600/600", link: "sydney-sweeney/" },
+            { name: "Ana de Armas", image: "https://picsum.photos/id/133/600/600", link: "ana-de-armas/" }
+        ];
+
+        const grid = document.getElementById('stars-grid');
+        stars.forEach(star => {
+            const cardHTML = `
+                <a href="${star.link}" class="star-card">
+                    <div class="image-wrapper">
+                        <img src="${star.image}" alt="${star.name}" loading="lazy">
+                    </div>
+                    <div class="star-info">
+                        <h3>${star.name}</h3>
+                    </div>
+                </a>
+            `;
+            grid.innerHTML += cardHTML;
+        });
+    </script>
+</body>
+</html>
