@@ -3,218 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>তামান্না আক্তার</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Noto Serif Bengali', serif;
-        }
-        
-        .hero-img {
-            width: 280px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        
 
-        
-        .rating-btn:hover {
-            background-color: #9f1239;
-        }
-        
-        .gallery-img:hover {
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3);
-        }
-        
-        .section-long {
-            min-height: 80vh;
-        }
-        
-        @media (max-width: 768px) {
-            .hero-img {
-                width: 220px;
-                height: 220px;
-            }
-        }
-    </style>
+    <title>তামান্না আক্তার — ব্যক্তিগত লেখা</title>
+
+    <meta name="description" content="তামান্না আক্তারের ব্যক্তিগত লেখা, ছবি ও স্মৃতির সংগ্রহ।">
+    <meta name="author" content="তামান্না আক্তার">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FFFDF8">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="তামান্না আক্তার — ব্যক্তিগত লেখা">
+    <meta property="og:description" content="তামান্না আক্তারের ব্যক্তিগত লেখা, ছবি ও স্মৃতির সংগ্রহ।">
+    <meta property="og:image" content="https://res.cloudinary.com/didbcg0dd/image/upload/v1782796170/ChatGPT_Image_Jun_30_2026_11_07_48_AM_zbzpz4.webp">
+    <meta property="og:image:secure_url" content="https://res.cloudinary.com/didbcg0dd/image/upload/v1782796170/ChatGPT_Image_Jun_30_2026_11_07_48_AM_zbzpz4.webp">
+    <meta property="og:image:type" content="image/webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="bn_BD">
+
+    <!-- নিজের ডোমেইন হলে এটি পরিবর্তন করো -->
+    <meta property="og:url" content="https://example.com/">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="তামান্না আক্তার — ব্যক্তিগত লেখা">
+    <meta name="twitter:description" content="তামান্না আক্তারের ব্যক্তিগত লেখা, ছবি ও স্মৃতির সংগ্রহ।">
+    <meta name="twitter:image" content="https://res.cloudinary.com/didbcg0dd/image/upload/v1782796170/ChatGPT_Image_Jun_30_2026_11_07_48_AM_zbzpz4.webp">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://weirdhub.site/tamanna/">
+
+    <!-- Fonts & Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-black text-white">
-    <!-- Header -->
-    <header class="bg-gradient-to-r from-pink-900 to-rose-900 py-6 sticky top-0 z-50 shadow-2xl">
-        <div class="max-w-6xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold tracking-wider">তামান্না আক্তার</h1>
-            <p class="text-pink-300 mt-2 text-lg">ঢাকা গাজীপুর <br> দেশের বাড়িঃ ঝিনাইদহ </p>
+<body>
+    <!-- Sticky Header -->
+    <header>
+        <div class="header-inner">
+            <h1>তামান্না আক্তার</h1>
+            <div class="header-locations">
+                <p>ঢাকা, গাজীপুর</p>
+                <p>দেশের বাড়ি: ঝিনাইদহ</p>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-12 pb-10 bg-gradient-to-b from-black to-zinc-950">
-        <div class="max-w-4xl mx-auto text-center px-4">
-            <div class="flex justify-center">
-                <img src="https://picsum.photos/id/1011/600/600" 
-                     alt="তামান্না আক্তার" 
-                     class="hero-img">
-            </div>
-            <h2 class="text-3xl md:text-4xl font-semibold mt-8 mb-3">তামান্না আক্তার</h2>
-            <p class="text-xl text-pink-300">ঢাকা, গাজীপুর</p>
+    <section class="hero">
+        <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782796714/tamanna1_tbg18j.webp" 
+             alt="তামান্না আক্তার — প্রোফাইল ছবি" 
+             class="profile-photo">
+
+        <div class="hero-content">
+            <h2>তামান্না আক্তার</h2>
+            <p class="hero-location">ঢাকা, গাজীপুর &nbsp;·&nbsp; দেশের বাড়ি: ঝিনাইদহ</p>
             
-            <div class="mt-10">
-                <h3 class="text-2xl font-medium mb-6">আপনি আমাকে ১০ এর মধ্যে কত দিবেন? <br> নিচে ক্লিক করে জানান </h3>
+            <div class="divider"></div>
+            
+            <h3 class="rating-heading">রেটিং</h3>
+            <p>তামান্না কে ১০ এর মধ্যে কত দিবেন?</p>
+            <br>
+            
+            <!-- Rating Buttons -->
+            <div class="rating-buttons">
+                <a href="https://www.effectivecpmnetwork.com/ig6ns456aa?key=23eaa0c7d70122dd5d2160fd7eb78b0e" class="rating-btn" target="_blank" rel="noopener">১</a>
+                <a href="https://www.effectivecpmnetwork.com/mu42zeyzw?key=dbd2eec2c8840f8c73b9e6eb37e41f4f" class="rating-btn" target="_blank" rel="noopener">২</a>
+                <a href="https://www.effectivecpmnetwork.com/w1xy39yut?key=45c6eb6fadcbe015e0cd6005c2e0d5e3" class="rating-btn" target="_blank" rel="noopener">৩</a>
+                <a href="https://www.effectivecpmnetwork.com/jcnn02c0d?key=6387cf8fe4b4da66277356a6607dd172" class="rating-btn" target="_blank" rel="noopener">৪</a>
+                <a href="https://www.effectivecpmnetwork.com/js16ihuku?key=c782aef42c9191f26731e63c2018d2f2" class="rating-btn" target="_blank" rel="noopener">৫</a>
+                <a href="https://www.effectivecpmnetwork.com/ig6ns456aa?key=23eaa0c7d70122dd5d2160fd7eb78b0e" class="rating-btn" target="_blank" rel="noopener">৬</a>
+                <a href="https://www.effectivecpmnetwork.com/mu42zeyzw?key=dbd2eec2c8840f8c73b9e6eb37e41f4f" class="rating-btn" target="_blank" rel="noopener">৭</a>
+                <a href="https://www.effectivecpmnetwork.com/w1xy39yut?key=45c6eb6fadcbe015e0cd6005c2e0d5e3" class="rating-btn" target="_blank" rel="noopener">৮</a>
+                <a href="https://www.effectivecpmnetwork.com/jcnn02c0d?key=6387cf8fe4b4da66277356a6607dd172" class="rating-btn" target="_blank" rel="noopener">৯</a>
+                <a href="https://www.effectivecpmnetwork.com/js16ihuku?key=c782aef42c9191f26731e63c2018d2f2" class="rating-btn" target="_blank" rel="noopener">১০</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <main>
+
+        <!-- Blog Post 1 -->
+        <article class="blog-post">
+            <figure class="blog-image">
+                <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782796170/ChatGPT_Image_Jun_30_2026_11_07_48_AM_zbzpz4.webp" 
+                     alt="তামান্নার খোলামেলা ছবি">
+            </figure>
+            
+ <h2 class="article-title">ছেলেদের লিঙ্গ কত বড় হলে মেয়েরা খুশি হয়?</h2>
+            
+            <div class="article-body">
+                <p>এই প্রশ্নটা অনেক ছেলের মনে ঘুরে। কিন্তু সত্যি কথা হলো, মেয়েরা আসলে শুধু আকার নিয়ে খুশি হয় না। বেশিরভাগ ক্ষেত্রে আকারের চেয়ে অনেক বেশি গুরুত্বপূর্ণ হয় স্পর্শের নরমতা, সময় নিয়ে ভালোবাসা এবং মেয়ের শরীরকে বোঝার চেষ্টা। যে ছেলে তার সঙ্গীর আরাম ও আনন্দকে প্রথমে রাখে, সে সাধারণত বেশি সন্তুষ্টি দিতে পারে।</p>
                 
-                <!-- Rating Buttons -->
-                <div class="grid grid-cols-5 md:grid-cols-10 gap-3 max-w-2xl mx-auto">
-                    <a href="https://www.effectivecpmnetwork.com/ig6ns456aa?key=23eaa0c7d70122dd5d2160fd7eb78b0e" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">১</a>
-                    <a href="https://www.effectivecpmnetwork.com/mu42zeyzw?key=dbd2eec2c8840f8c73b9e6eb37e41f4f" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">২</a>
-                    <a href="https://www.effectivecpmnetwork.com/w1xy39yut?key=45c6eb6fadcbe015e0cd6005c2e0d5e3" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">৩</a>
-                    <a href="https://www.effectivecpmnetwork.com/jcnn02c0d?key=6387cf8fe4b4da66277356a6607dd172" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">৪</a>
-                    <a href="https://www.effectivecpmnetwork.com/js16ihuku?key=c782aef42c9191f26731e63c2018d2f2" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">৫</a>
-                    <a href="https://www.effectivecpmnetwork.com/ig6ns456aa?key=23eaa0c7d70122dd5d2160fd7eb78b0e" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">৬</a>
-                    <a href="https://www.effectivecpmnetwork.com/mu42zeyzw?key=dbd2eec2c8840f8c73b9e6eb37e41f4f" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">৭</a>
-                    <a href="https://www.effectivecpmnetwork.com/w1xy39yut?key=45c6eb6fadcbe015e0cd6005c2e0d5e3" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">৮</a>
-                    <a href="https://www.effectivecpmnetwork.com/jcnn02c0d?key=6387cf8fe4b4da66277356a6607dd172" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">৯</a>
-                    <a href="https://www.effectivecpmnetwork.com/js16ihuku?key=c782aef42c9191f26731e63c2018d2f2" target="_blank" 
-                       class="rating-btn bg-rose-700 hover:bg-rose-600 text-white font-bold text-xl py-6 rounded-xl shadow-lg">১০</a>
-                </div>
-            </div>
-        </div>
-    </section>
+                <p>গবেষণা ও বাস্তব অভিজ্ঞতা বলে, গড় আকারের লিঙ্গই বেশিরভাগ মেয়ের জন্য যথেষ্ট। অতিরিক্ত বড় হলে অনেক সময় অস্বস্তি বা ব্যথা হতে পারে। মেয়েরা আসলে চায় এমন একজনকে যে তাদের শরীরের প্রতিক্রিয়া লক্ষ্য করে, আদর করে এবং ধৈর্য ধরে। শুধু আকার নয়, কৌশল, মানসিক সংযোগ আর আত্মবিশ্বাসই আসল আকর্ষণ।</p>
+                
+                <p>অনেক মেয়ে বলেন, সবচেয়ে বড় সুখ আসে যখন দুজনের মধ্যে বিশ্বাস ও আরামের পরিবেশ থাকে। লিঙ্গের আকার নিয়ে অতিরিক্ত চিন্তা করলে আসলে আত্মবিশ্বাস কমে যায়, যা পুরো অভিজ্ঞতাকে প্রভাবিত করে। যে ছেলে নিজেকে স্বাভাবিকভাবে গ্রহণ করে এবং সঙ্গীর সাথে মনোযোগ দিয়ে সময় কাটায়, সেই সবচেয়ে বেশি খুশি করতে পারে।</p>
+                
+                <p>শেষ কথা, খুশি হওয়ার জন্য কোনো নির্দিষ্ট মাপ নেই। প্রত্যেক মেয়ের পছন্দ আলাদা, কিন্তু সবার মধ্যে সাধারণ জিনিস হলো—ভালোবাসা, যত্ন আর পারস্পরিক সন্তুষ্টির চেষ্টা। আকারের চেয়ে সংযোগ অনেক বড়। যখন দুজন সত্যিকারের কাছাকাছি হয়, তখন এসব সংখ্যা আর গুরুত্বপূর্ণ থাকে না।</p>
+</div>
 
-    <!-- Gallery Section (৬টা ছবি) -->
-    <section class="py-12 bg-zinc-950">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-semibold text-center mb-10 text-pink-400">আমার কিছু মুহূর্ত</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <img src="https://picsum.photos/id/1011/600/800" alt="" class="gallery-img w-full aspect-[4/5] object-cover rounded-2xl">
-                <img src="https://picsum.photos/id/1027/600/800" alt="" class="gallery-img w-full aspect-[4/5] object-cover rounded-2xl">
-                <img src="https://picsum.photos/id/1005/600/800" alt="" class="gallery-img w-full aspect-[4/5] object-cover rounded-2xl">
-                <img src="https://picsum.photos/id/106/600/800" alt="" class="gallery-img w-full aspect-[4/5] object-cover rounded-2xl">
-                <img src="https://picsum.photos/id/201/600/800" alt="" class="gallery-img w-full aspect-[4/5] object-cover rounded-2xl">
-                <img src="https://picsum.photos/id/669/600/800" alt="" class="gallery-img w-full aspect-[4/5] object-cover rounded-2xl">
-            </div>
-        </div>
-    </section>
+<div class="article-gallery">
 
-    <!-- Long Seductive Section -->
-    <section class="section-long bg-gradient-to-b from-zinc-900 to-black py-16 flex items-center">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <p class="text-2xl leading-relaxed text-pink-200 max-w-3xl mx-auto">
-                হ্যালো প্রিয়, আমি তামান্না আক্তার রিমি। আমার বয়স ১৬ বছর।
-                আপনার পরিচয় আমাকে জানান। <br><br><br><br>
-                <a href="https://www.effectivecpmnetwork.com/ig6ns456aa?key=23eaa0c7d70122dd5d2160fd7eb78b0e" target="_blank" 
-                       class="rating-btn bg-rose-700 py-6 rounded-xl shadow-lg">... পরিচয় দিন ...</a>
-            </p>
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna7_ketswj.webp" alt="তামান্নার ছবি">
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna5_hdfyyu.webp" alt="তামান্নার ছবি">
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna6_h1gdwt.webp" alt="তামান্নার ছবি">
+
+</div>
+
+</article>
+
+<script>
+  atOptions = {
+    'key' : '5f5e74b694e4e79eba9ca7adabbbd02c',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/5f5e74b694e4e79eba9ca7adabbbd02c/invoke.js"></script>
+
+
+        <!-- Blog Post 2 -->
+        <article class="blog-post">
+            <figure class="blog-image">
+                <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782796170/ChatGPT_Image_Jun_30_2026_11_05_21_AM_afdvlh.webp" 
+                     alt="তামান্নার উচু বুকের ছবি">
+            </figure>
             
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
-                <div class="bg-zinc-900/70 p-8 rounded-3xl border border-pink-800">
-                    <p class="text-pink-300">চেহারার সৌন্দর্যই সব কিছু না। মনের সৌন্দর্যই আসল।</p>
-                </div>
-                <div class="bg-zinc-900/70 p-8 rounded-3xl border border-pink-800">
-                    <p class="text-pink-300">উপরে রেটিং দিয়ে দেখাও কতটা পছন্দ করো আমাকে।</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ <h2 class="article-title">বেশি বয়সের ছেলেরা কম বয়সী মেয়েদেরকে বিয়ে করতে চায় কেন?</h2>
+            
+            <div class="article-body">
+                <p>বড় বয়সী ছেলেরা অনেক সময় কম বয়সী মেয়েদের দিকে ঝোঁকেন কারণ তাদের মধ্যে একটা তাজা প্রাণশক্তি খুঁজে পান। জীবনের অনেক ঝড়-ঝাপটা পার হয়ে আসার পর যখন একটা নতুন শুরুর ইচ্ছে জাগে, তখন কম বয়সী মেয়ের উদ্যম, স্বপ্ন আর হাসিমুখ তাদেরকে নতুন করে অনুপ্রাণিত করে। এটা শুধু বয়সের ব্যবধান নয়, একটা নতুন দৃষ্টিভঙ্গির আকর্ষণ।</p>
+                
+                <p>অনেকে মনে করেন, কম বয়সী মেয়েরা তুলনামূলকভাবে কম জটিল, বেশি মানিয়ে নিতে পারে এবং ভবিষ্যতের স্বপ্নগুলোকে সহজে ভাগ করে নেয়। বড় ছেলেরা যখন ক্যারিয়ার বা দায়িত্বের বোঝা কাঁধে নিয়ে ক্লান্ত হয়, তখন এমন একজন সঙ্গী চান যিনি তাদের জীবনে হালকা বাতাসের মতো আসেন। এছাড়া সমাজ ও পরিবারের প্রত্যাশাও অনেক সময় এই পছন্দকে প্রভাবিত করে।</p>
+                
+                <p>কম বয়সী মেয়েরা প্রায়ই বেশি আনুগত্যশীল, শ্রদ্ধাশীল এবং পরিবারকে গুরুত্ব দেন বলে মনে হয়। বড় ছেলেরা চান এমন একজনকে যার সাথে জীবনের বাকি পথটা শান্তিতে, সুখে কাটানো যায়। তাদের অভিজ্ঞতা আর মেয়েটির সতেজতার মিশ্রণে একটা সুন্দর ভারসাম্য তৈরি হয় বলে তারা বিশ্বাস করেন।</p>
+                
+                <p>তবে শেষ পর্যন্ত এটা ব্যক্তিগত পছন্দ। কেউ কেউ বয়সের ব্যবধান নির্বিশেষে মনের মিলকেই সবচেয়ে বেশি গুরুত্ব দেন। সত্যিকারের সম্পর্ক তখনই সুন্দর হয় যখন দুজনের মধ্যে বোঝাপড়া, সম্মান আর ভালোবাসা থাকে। বয়স শুধু একটা সংখ্যা, আসল জিনিসটা হলো হৃদয়ের কাছাকাছি হওয়া।</p>
+</div>
 
-    <!-- Two Big Images -->
-    <section class="py-12 bg-black">
-        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-                <img src="https://picsum.photos/id/1015/800/1000" alt="তামান্না" 
-                     class="w-full rounded-3xl shadow-2xl">
-            </div>
-            <div>
-                <img src="https://picsum.photos/id/1020/800/1000" alt="তামান্না" 
-                     class="w-full rounded-3xl shadow-2xl">
-            </div>
-        </div>
-    </section>
+<div class="article-gallery">
 
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna4_kgb1c4.webp" alt="তামান্নার ব্যক্তিগত ছবি দেখুন">
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna2_stxtur.webp" alt="তামান্নার ব্যক্তিগত ছবি দেখুন">
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna3_bawhop.webp" alt="তামান্নার ব্যক্তিগত ছবি দেখুন">
+
+</div>
+
+</article>
+
+<script>
+  atOptions = {
+    'key' : '5f5e74b694e4e79eba9ca7adabbbd02c',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/5f5e74b694e4e79eba9ca7adabbbd02c/invoke.js"></script>
+
+
+        <!-- Blog Post 3 -->
+        <article class="blog-post">
+            <figure class="blog-image">
+                <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782796714/tamanna2_scsfig.webp" 
+                     alt="ছবির মধ্যে লুকিয়ে থাকা গল্প — ফটোগ্রাফির ভাষা">
+            </figure>
+            
+            <h2 class="article-title">একটা ছেলে একটা মেয়ের কাছে কী কী চায়?</h2>
+            
+            <div class="article-body">
+                <p>একটা ছেলে একটা মেয়ের কাছে শুধু ভালোবাসা চায় না। সে চায় এমন একজনকে, যার সামনে নিজেকে পুরোপুরি খুলে বলতে পারে। যেখানে কোনো মুখোশ লাগে না, কোনো অভিনয় করতে হয় না। চোখের দিকে তাকিয়ে হাসলে যেন সব ক্লান্তি দূর হয়ে যায়। সে চায় এমন একটা সঙ্গী, যে তার নীরবতাও বুঝতে পারে।</p>
+                
+                <p>সে চায় বিশ্বাস, সম্মান আর একটু আপন করে নেওয়া। ছোট ছোট যত্ন, অপ্রত্যাশিত খেয়াল, আর সেই হাসি যা দিনের সব ঝামেলা ভুলিয়ে দেয়। ঝগড়া হলেও যেন শেষে কাছে টেনে নেয়। জীবনের পথে একসাথে হাঁটার স্বপ্ন, ভবিষ্যতের কথা বলার সাহস। শুধু শারীরিক নয়, মনের গভীরে একটা নিরাপদ আশ্রয়।</p>
+                
+                <p>মেয়েটির কাছে সে নিজেকে ভুলে যেতে চায়। তার সামনে দুর্বল হতে পারে, আবার শক্তিশালীও হতে পারে। যখন কথা বলে না, তখনও যেন বোঝা যায় সে কী চায়। এই সম্পর্কটা যেন শান্তি দেয়, অনুপ্রেরণা দেয়। প্রতিটা মুহূর্তে যেন মনে হয়—এই তো আমার মানুষ।</p>
+                
+                <p>আমি বিশ্বাস করি, একটা ছেলে আসলে খুব সাধারণ কিছুই চায়। সত্যিকারের ভালোবাসা, বোঝাপড়া আর একটু স্থায়ীত্ব। যেন একসাথে বুড়ো হওয়ার স্বপ্ন দেখা যায়। কারণ সত্যিকারের সম্পর্ক মানে শুধু চাওয়া নয়, একে অপরকে পূর্ণ করা।</p>
+</div>
+
+<div class="article-gallery">
+
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829153/tamanna1_sfney7.webp" alt="তামান্নার ব্যক্তিগত ছবি দেখুন">
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna6_h1gdwt.webp" alt="তামান্নার ব্যক্তিগত ছবি দেখুন">
+    <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782829154/tamanna2_stxtur.webp" alt="তামান্নার ব্যক্তিগত ছবি দেখুন">
+
+</div>
+
+</article>
+    </main>
+
+    <!-- Minimal Footer -->
+
+
+    <!-- Advertisement Script (exactly as requested) -->
     <script async="async" data-cfasync="false" src="https://pl30134735.effectivecpmnetwork.com/19bdebcbe6969a7e5884ab0a384f1f1d/invoke.js"></script>
-<div id="container-19bdebcbe6969a7e5884ab0a384f1f1d"></div>
+    <div id="container-19bdebcbe6969a7e5884ab0a384f1f1d"></div>
 
 
-    <!-- Picture + Description Sections -->
-    <section class="py-16 bg-zinc-950">
-        <div class="max-w-4xl mx-auto px-6 space-y-16">
-            <!-- First -->
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-5/12">
-                    <img src="https://picsum.photos/id/870/600/700" alt="" 
-                         class="w-full rounded-3xl shadow-xl">
-                </div>
-                <div class="md:w-7/12">
-                    <h3 class="text-2xl font-medium text-pink-400 mb-4">আমার স্বপ্ন</h3>
-                    <p class="text-lg leading-relaxed text-zinc-300">
-                        রাতে তোমার সাথে অনেক কথা বলতে চাই।
-                    </p>
-                </div>
-            </div>
+<section class="save-images-section">
 
-            <script>
-  atOptions = {
-    'key' : 'db6832f46352866025eeb345a6610681',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/db6832f46352866025eeb345a6610681/invoke.js"></script>
+    <h2>আপনি কি সব ছবি সেইভ করতে চান?</h2>
 
-            
-            <!-- Second -->
-            <div class="flex flex-col md:flex-row gap-8 items-center">
-                <div class="md:w-7/12 order-2 md:order-1">
-                    <h3 class="text-2xl font-medium text-pink-400 mb-4">তোমার জন্য অপেক্ষায়</h3>
-                    <p class="text-lg leading-relaxed text-zinc-300">
-                        কলেজের পড়াশোনার ফাঁকে তোমার মতো সুন্দর কারো সাথে সময় কাটাতে চাই। 
-                        আমাকে রেটিং দিয়ে জানাও কতটা ভালো লাগছে।
-                    </p>
-                </div>
-                <div class="md:w-5/12 order-1 md:order-2">
-                    <img src="https://picsum.photos/id/201/600/700" alt="" 
-                         class="w-full rounded-3xl shadow-xl">
-                </div>
-            </div>
+    <div class="save-images-buttons">
 
-            <script>
-  atOptions = {
-    'key' : 'db6832f46352866025eeb345a6610681',
-    'format' : 'iframe',
-    'height' : 60,
-    'width' : 468,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/db6832f46352866025eeb345a6610681/invoke.js"></script>
+        <a href="https://www.effectivecpmnetwork.com/w1xy39yut?key=45c6eb6fadcbe015e0cd6005c2e0d5e3">হ্যাঁ</a>
 
+        <a href="https://www.effectivecpmnetwork.com/jcnn02c0d?key=6387cf8fe4b4da66277356a6607dd172">না</a>
+
+    </div>
+
+</section>
+
+        <footer>
+        <div class="footer-inner">
+            <p>তামান্না আক্তার • ঢাকা, গাজীপুর • দেশের বাড়ি: ঝিনাইদহ</p>
         </div>
-    </section>
-
-<script async="async" data-cfasync="false" src="https://pl30134735.effectivecpmnetwork.com/19bdebcbe6969a7e5884ab0a384f1f1d/invoke.js"></script>
-<div id="container-19bdebcbe6969a7e5884ab0a384f1f1d"></div>
-
-    <footer class="bg-black border-t border-zinc-800 py-10 text-center text-zinc-500">
-        <p>© তামান্না আক্তার • সব অধিকার সংরক্ষিত</p>
-        <p class="mt-2 text-xs">২০ বছর বয়সী • গাজীপুর</p>
     </footer>
 
-    <script>
-        // Simple Tailwind script (already included via CDN)
-    </script>
 </body>
 </html>

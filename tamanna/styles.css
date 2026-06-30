@@ -1,0 +1,342 @@
+/* ====================== 
+   তামান্না আক্তার — ব্যক্তিগত ব্লগ 
+   CSS (Pure HTML5 + CSS3)
+   ====================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Serif Bengali', Georgia, serif;
+    background-color: #FFFDF8;
+    color: #2c2c2c;
+    line-height: 1.9;
+    font-size: 1.1rem;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #FFFDF8;
+    border-bottom: 1px solid #e8e4d9;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+.header-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+header h1 {
+    font-size: 1.85rem;
+    color: #1f1f1f;
+}
+
+.header-locations {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.header-locations p {
+    margin-bottom: 0.2rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+    background-color: #FFFDF8;
+}
+
+.profile-photo {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin: 0 auto 2.5rem;
+    border-radius: 0;
+}
+
+.hero-content h2 {
+    font-size: 2.1rem;
+    margin-bottom: 0.6rem;
+    color: #1f1f1f;
+}
+
+.hero-location {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1.8rem;
+}
+
+.divider {
+    width: 60px;
+    height: 1px;
+    background-color: #d4c9b8;
+    margin: 1.5rem auto;
+}
+
+.rating-heading {
+    font-size: 1.35rem;
+    margin-bottom: 1.2rem;
+    color: #2c2c2c;
+}
+
+/* Rating Buttons */
+.rating-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.rating-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9c2a1f;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    min-width: 44px;
+    transition: background-color 0.2s ease;
+}
+
+.rating-btn:hover {
+    background-color: #7a1f17;
+}
+
+/* Main Content */
+main {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+}
+
+.blog-post {
+    margin-bottom: 5.5rem;
+}
+
+.blog-post:last-child {
+    margin-bottom: 3rem;
+}
+
+.blog-image {
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.blog-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
+}
+
+.article-title {
+    font-size: 2.1rem;
+    margin-bottom: 1.8rem;
+    color: #1f1f1f;
+}
+
+.article-body p {
+    margin-bottom: 1.75rem;
+    text-align: justify;
+}
+
+/* ======================
+   Article Gallery
+====================== */
+
+.article-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:2.5rem;
+}
+
+.article-gallery img{
+    width:100%;
+    aspect-ratio:3/4;
+    object-fit:cover;
+    display:block;
+    border-radius:0;
+}
+
+/* Tablet */
+
+@media (max-width:768px){
+
+    .article-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:480px){
+
+    .article-gallery{
+        grid-template-columns:1fr;
+        gap:14px;
+    }
+
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #e8e4d9;
+    background-color: #FFFDF8;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+}
+
+.footer-inner p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .rating-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        min-width: 36px;
+        flex: 0 0 calc(20% - 8px);
+    }
+    
+    .hero {
+        padding: 3rem 1rem 2.5rem;
+    }
+    
+    .profile-photo {
+        max-width: 340px;
+    }
+    
+    header h1 {
+        font-size: 1.65rem;
+    }
+    
+    .article-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .rating-buttons {
+        gap: 12px;
+    }
+    
+    .rating-btn {
+        flex: 0 0 calc(18% - 10px);
+        padding: 11px 18px;
+        font-size: 1rem;
+    }
+    
+    .hero {
+        padding: 5rem 2rem 4rem;
+    }
+    
+    .article-title {
+        font-size: 2.35rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .hero {
+        padding: 6rem 2rem 4.5rem;
+    }
+}
+
+
+.save-images-section{
+    max-width:760px;
+    margin:5rem auto;
+    padding:0 1.5rem;
+    text-align:center;
+}
+
+.save-images-section h2{
+    font-size:2rem;
+    font-weight:700;
+    color:#222;
+    line-height:1.5;
+    margin-bottom:2rem;
+}
+
+.save-images-buttons{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+
+.save-images-buttons a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:140px;
+    height:46px;
+    padding:0 28px;
+    background:#b1262f;
+    color:#fff;
+    text-decoration:none;
+    font-size:1rem;
+    font-weight:600;
+    border-radius:6px;
+    transition:background-color .2s ease;
+}
+
+.save-images-buttons a:hover{
+    background:#931d25;
+}
+
+@media (max-width:480px){
+
+    .save-images-section{
+        margin:4rem auto;
+    }
+
+    .save-images-section h2{
+        font-size:1.55rem;
+    }
+
+    .save-images-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .save-images-buttons a{
+        width:100%;
+        max-width:260px;
+    }
+
+}
