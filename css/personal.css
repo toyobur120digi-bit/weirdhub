@@ -3,6 +3,49 @@
    Follows all existing rules: blocky, vanilla, responsive
    ======================================== */
 
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+
+   body {
+    font-family: "Hind Siliguri", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+
+    .personal-hero h1,
+    .girl-hero h1 {
+        font-size: 3rem;
+    }
+
+    .personal-hero p {
+        font-size: 1.25rem;
+    }
+
+    .girl-content {
+        font-size: 1.1rem;
+    }
+
+    .girl-content h2 {
+        font-size: 2rem;
+    }
+
+    .girl-card h3 {
+        font-size: 1.55rem;
+    }
+
+    .biodata-box {
+        font-size: 1.05rem;
+    }
+}
+
 .personal-hero {
   padding: 3rem 0 2.5rem;
   background: var(--bg-alt);
@@ -187,4 +230,21 @@
     object-fit: cover;
     margin: 1.5rem 0;
     border: 1px solid var(--border);
+}
+
+.story-audio {
+    width: 100%;
+    margin: 0;
+}
+
+verticalAD {
+  width: 100%;
+  background-color: #ffeddf;
+  height: auto;
+  display: flex;
+  justify-items: center;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
 }
