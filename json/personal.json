@@ -1,0 +1,44 @@
+{
+  "girls": [
+    {
+      "slug": "tania-binte",
+      "name": "তানিয়া বিনতে",
+      "english_name": "Tania Binte",
+      "age": 28,
+      "profession": "ডিজিটাল মার্কেটার",
+      "location": "ঢাকা, বাংলাদেশ",
+      "short_bio": "জীবনের অনেক লড়াইয়ের পর এখন নিজের পায়ে দাঁড়ানোর চেষ্টায় ব্যস্ত।",
+      "url": "https://weirdhub.site/personal/tania-binte/"
+    },
+    {
+      "slug": "hafsa-akter",
+      "name": "হাফসা আক্তার",
+      "english_name": "Hafsa Akter",
+      "age": 32,
+      "profession": "স্কুল শিক্ষক",
+      "location": "চট্টগ্রাম, বাংলাদেশ",
+      "short_bio": "তিন সন্তানের মা। জীবনের ছোট ছোট আনন্দ খুঁজে বেড়ান।",
+      "url": "https://weirdhub.site/personal/hafsa-akter/"
+    },
+    {
+      "slug": "nasrin-jahan",
+      "name": "নাসরিন জাহান",
+      "english_name": "Nasrin Jahan",
+      "age": 35,
+      "profession": "ফ্রিল্যান্স গ্রাফিক ডিজাইনার",
+      "location": "সিলেট, বাংলাদেশ",
+      "short_bio": "বিয়ের পর নিজের স্বপ্নকে আবার জাগিয়ে তুলেছেন।",
+      "url": "https://weirdhub.site/personal/nasrin-jahan/"
+    },
+    {
+      "slug": "sumaiya-khatun",
+      "name": "সুমাইয়া খাতুন",
+      "english_name": "Sumaiya Khatun",
+      "age": 27,
+      "profession": "নার্স",
+      "location": "রাজশাহী, বাংলাদেশ",
+      "short_bio": "মানুষের সেবা করতে ভালোবাসেন। জীবনের অনেক অজানা গল্প আছে।",
+      "url": "https://weirdhub.site/personal/sumaiya-khatun/"
+    }
+  ]
+}
