@@ -1,5 +1,3 @@
-/* styles.css - Simple & Clean (No hover animation/translate) */
-
 * {
     margin: 0;
     padding: 0;
@@ -7,106 +5,119 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0a0a14;
-    color: #ffffff;
-    line-height: 1.6;
-    min-height: 100vh;
+    font-family: 'Noto Sans Bengali', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #FFF9E6;
+    color: #2d3748;
+    line-height: 1.8;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 2rem;
 }
 
 header {
+    background-color: #E3F2FD;
+    padding: 5rem 0;
     text-align: center;
-    padding: 70px 0 50px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 h1 {
-    font-size: 3.8rem;
-    font-weight: 800;
-    letter-spacing: -2px;
-    margin-bottom: 10px;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #1a365d;
+    margin-bottom: 1.5rem;
 }
 
-.highlight {
-    color: #e91e63;
+.intro {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #4a5568;
 }
 
-.tagline {
-    font-size: 1.35rem;
-    color: #a0a0c0;
-    font-weight: 400;
+.section {
+    padding: 4rem 0;
 }
 
-main {
-    padding: 60px 0;
+.image-section {
+    background-color: #ffffff;
 }
 
-.stars-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 28px;
+.text-section {
+    background-color: #F0F7FF;
 }
 
-.star-card {
-    text-decoration: none;
-    color: inherit;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #16161f;
-    transition: background-color 0.25s ease;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-}
-
-.star-card:hover {
-    background-color: #25253a;   /* শুধু ব্যাকগ্রাউন্ড রং চেঞ্জ */
-}
-
-.image-wrapper {
-    position: relative;
-    padding-top: 100%; /* Square shape */
-    background: #111;
-}
-
-.image-wrapper img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.star-info {
-    padding: 22px 18px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.65);
-}
-
-.star-info h3 {
-    font-size: 1.28rem;
+h2 {
+    font-size: 2.2rem;
     font-weight: 600;
+    color: #2c5282;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.actress-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.actress-card {
+    display: block;
+    text-decoration: none;
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.actress-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.name {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0;
+    background-color: #fff;
+}
+
+.text-section p {
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 footer {
+    background-color: #E3F2FD;
+    padding: 2.5rem 0;
     text-align: center;
-    padding: 50px 0 30px;
-    color: #666;
-    font-size: 0.95rem;
-    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.9rem;
+footer p {
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+@media (max-width: 900px) {
+    .actress-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .stars-grid {
-        gap: 22px;
+}
+
+@media (max-width: 600px) {
+    .actress-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
     }
 }

@@ -1,63 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover your favorite stars - Actresses and Celebrities">
-    <title>Stars | WeirdHub</title>
-    <link rel="canonical" href="https://weirdhub.site/stars/">
+    <title>নায়িকাদের সম্পর্কে জানুন</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>WeirdHub <span class="highlight">Stars</span></h1>
-            <p class="tagline">Explore the most talented and beautiful actresses from around the world</p>
+            <h1>নায়িকাদের সম্পর্কে জানুন</h1>
+            <p class="intro">
+                বাংলাদেশ ও ভারতের চলচ্চিত্র জগতের নায়িকারা সমাজে নারীর শক্তি ও সৌন্দর্যের প্রতীক। 
+                তাদের অভিনয় শিল্প আমাদের অনুপ্রাণিত করে এবং নানা সামাজিক বার্তা পৌঁছে দেয়। 
+                এই পেজে তাদের জীবন ও অবদান সম্পর্কে বিস্তারিত জানুন।
+            </p>
         </div>
     </header>
 
     <main>
-        <div class="container">
-            <div class="stars-grid" id="stars-grid">
-                <!-- Stars populated by JS -->
+        <!-- সেকশন ১: বাংলাদেশী নায়িকা -->
+        <section class="section image-section">
+            <div class="container">
+                <h2>বাংলাদেশী নায়িকাগণ</h2>
+                <div class="actress-grid">
+                    <a href="opu-biswas/" class="actress-card" target="_blank">
+                        <img src="https://res.cloudinary.com/didbcg0dd/image/upload/v1782878609/cropped-300x300_ojma3o.webp" alt="অপু বিশ্বাস">
+                        <p class="name">অপু বিশ্বাস</p>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Shabnom_Bubly" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/1012/300/300" alt="বুবলি">
+                        <p class="name">বুবলি</p>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Joya_Ahsan" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/1009/300/300" alt="জয়া আহসান">
+                        <p class="name">জয়া আহসান</p>
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <!-- সেকশন ২: বাংলাদেশে নায়িকাদের অবস্থা -->
+        <section class="section text-section">
+            <div class="container">
+                <h2>বাংলাদেশে নায়িকাদের অবস্থা</h2>
+                <p>বাংলাদেশের চলচ্চিত্র শিল্পে নায়িকাদের ভূমিকা দিন দিন বৃদ্ধি পাচ্ছে। তারা শুধু অভিনয় নয়, সমাজের নানা সমস্যা যেমন নারী নির্যাতন, শিক্ষা ও স্বাস্থ্য নিয়ে সচেতনতা তৈরি করছেন। তবে এখনো অনেক নায়িকাকে পেশাগত ও ব্যক্তিগত জীবনে নানা বাধার সম্মুখীন হতে হয়। সরকারি ও বেসরকারি উদ্যোগে তাদের নিরাপত্তা ও সম্মান নিশ্চিত করা জরুরি।</p>
+            </div>
+        </section>
+
+        <!-- সেকশন ৩: ভারতীয় নায়িকা (প্রথম সেট) -->
+        <section class="section image-section">
+            <div class="container">
+                <h2>ভারতীয় নায়িকাগণ</h2>
+                <div class="actress-grid">
+                    <a href="https://en.wikipedia.org/wiki/Kareena_Kapoor_Khan" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/201/300/300" alt="কারিনা কাপুর খান">
+                        <p class="name">কারিনা কাপুর খান</p>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Deepika_Padukone" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/29/300/300" alt="দীপিকা পাডুকোন">
+                        <p class="name">দীপিকা পাডুকোন</p>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Alia_Bhatt" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/30/300/300" alt="আলিয়া ভাট">
+                        <p class="name">আলিয়া ভাট</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- সেকশন ৪: ইন্ডিয়াতে নায়িকাদের পরিস্থিতি -->
+        <section class="section text-section">
+            <div class="container">
+                <h2>ইন্ডিয়াতে নায়িকাদের পরিস্থিতি</h2>
+                <p>ভারতের বলিউড শিল্পে নায়িকারা আন্তর্জাতিক খ্যাতি অর্জন করেছেন। তারা বিভিন্ন ধরনের চরিত্রে অভিনয় করে দর্শকদের মন জয় করেছেন এবং নারীর ক্ষমতায়নের পক্ষে সোচ্চার হয়েছেন। তবে নেপোটিজম, বেতন বৈষম্য এবং মানসিক স্বাস্থ্যের মতো চ্যালেঞ্জগুলো এখনো বিদ্যমান। সাম্প্রতিক সময়ে অনেক নায়িকা তাদের অধিকার আদায়ে সক্রিয় ভূমিকা পালন করছেন।</p>
+            </div>
+        </section>
+
+        <!-- সেকশন ৫: আরও নায়িকা -->
+        <section class="section image-section">
+            <div class="container">
+                <h2>আরও জনপ্রিয় নায়িকা</h2>
+                <div class="actress-grid">
+                    <a href="https://en.wikipedia.org/wiki/Priyanka_Chopra" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/1011/300/300" alt="প্রিয়াঙ্কা চোপড়া">
+                        <p class="name">প্রিয়াঙ্কা চোপড়া জোনাস</p>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Katrina_Kaif" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/160/300/300" alt="কটরিনা কাইফ">
+                        <p class="name">কটরিনা কাইফ</p>
+                    </a>
+                    <a href="https://en.wikipedia.org/wiki/Anushka_Sharma" class="actress-card" target="_blank">
+                        <img src="https://picsum.photos/id/251/300/300" alt="অনুষ্কা শর্মা">
+                        <p class="name">অনুষ্কা শর্মা</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- সেকশন ৬: ইন্ডিয়াতে নায়িকাদের পরিস্থিতি (দ্বিতীয় অংশ) -->
+        <section class="section text-section">
+            <div class="container">
+                <h2>ইন্ডিয়াতে নায়িকাদের পরিস্থিতি</h2>
+                <p>ইন্ডিয়ান সিনেমায় নায়িকাদের পরিস্থিতি ধীরে ধীরে উন্নতি হচ্ছে। নতুন প্রজন্মের নায়িকারা আরও স্বাধীনভাবে কাজ করার সুযোগ পাচ্ছেন এবং বিভিন্ন সামাজিক আন্দোলনে অংশ নিচ্ছেন। তবে গ্রামীণ এলাকা ও ছোট শহরের নায়িকাদের জন্য এখনো অনেক সীমাবদ্ধতা রয়েছে। সামগ্রিকভাবে, নায়িকাদের অবস্থান শক্তিশালী হচ্ছে এবং তারা ভবিষ্যতে আরও বড় ভূমিকা রাখবেন বলে আশা করা যায়।</p>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 WeirdHub. All Rights Reserved.</p>
+            <p>© ২০২৬ | নায়িকাদের সম্পর্কে জানুন — সকল অধিকার সংরক্ষিত</p>
         </div>
     </footer>
-
-    <script>
-        const stars = [
-            { name: "Natasha Makcova", image: "https://picsum.photos/id/1011/600/600", link: "natasha/" },
-            { name: "Margot Robbie", image: "https://picsum.photos/id/1027/600/600", link: "margot-robbie/" },
-            { name: "Zendaya", image: "https://picsum.photos/id/1005/600/600", link: "zendaya/" },
-            { name: "Gal Gadot", image: "https://picsum.photos/id/1012/600/600", link: "gal-gadot/" },
-            { name: "Emma Watson", image: "https://picsum.photos/id/1025/600/600", link: "emma-watson/" },
-            { name: "Jennifer Lawrence", image: "https://picsum.photos/id/1009/600/600", link: "jennifer-lawrence/" },
-            { name: "Anya Taylor-Joy", image: "https://picsum.photos/id/102/600/600", link: "anya-taylor-joy/" },
-            { name: "Florence Pugh", image: "https://picsum.photos/id/201/600/600", link: "florence-pugh/" },
-            { name: "Sydney Sweeney", image: "https://picsum.photos/id/1003/600/600", link: "sydney-sweeney/" },
-            { name: "Ana de Armas", image: "https://picsum.photos/id/133/600/600", link: "ana-de-armas/" }
-        ];
-
-        const grid = document.getElementById('stars-grid');
-        stars.forEach(star => {
-            const cardHTML = `
-                <a href="${star.link}" class="star-card">
-                    <div class="image-wrapper">
-                        <img src="${star.image}" alt="${star.name}" loading="lazy">
-                    </div>
-                    <div class="star-info">
-                        <h3>${star.name}</h3>
-                    </div>
-                </a>
-            `;
-            grid.innerHTML += cardHTML;
-        });
-    </script>
 </body>
 </html>
