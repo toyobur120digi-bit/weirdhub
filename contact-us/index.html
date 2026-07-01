@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us • WeirdHub</title>
+  <meta name="description" content="Got a weird story tip, partnership idea, or just want to say hi? Reach out to the WeirdHub team.">
+  <link rel="canonical" href="https://weirdhub.site/contact-us/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  
+  <meta property="og:title" content="Contact Us • WeirdHub">
+  <meta property="og:description" content="Got a weird story tip, partnership idea, or just want to say hi? Reach out to the WeirdHub team.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://weirdhub.site/contact-us/">
+  <meta property="og:image" content="https://picsum.photos/id/160/1200/630">
+
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/page.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p style="font-size: 1.15rem; color: var(--text-muted);">Whether you have a story suggestion, media inquiry, or just want to share something wonderfully weird — we’d love to hear from you.</p>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <div class="contact-form">
+      <form id="contact-form" onsubmit="handleContactSubmit(event)">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Alex Rivera">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a topic...</option>
+            <option value="story-tip">Story Tip / Suggestion</option>
+            <option value="partnership">Partnership / Collaboration</option>
+            <option value="press">Press / Media Inquiry</option>
+            <option value="feedback">General Feedback</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Tell us what's on your mind..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">This is a demo form. No data is actually sent.</p>
+      </form>
+    </div>
+
+    <div style="margin-top: 3rem; text-align: center;">
+      <p>Prefer email? Reach us directly at <a href="mailto:hello@weirdhub.site">hello@weirdhub.site</a></p>
+      <p style="margin-top: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">We usually reply within 48 hours (except on full moons).</p>
+    </div>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="/js/components.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('button');
+      const originalText = btn.textContent;
+      
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        form.innerHTML = `
+          <div style="text-align:center; padding: 2rem 1rem;">
+            <h3 style="color: var(--accent); margin-bottom: 1rem;">Thank you!</h3>
+            <p>Your message has been received (demo mode). We'll get back to you soon.</p>
+          </div>
+        `;
+      }, 1200);
+    }
+  </script>
+</body>
+</html>

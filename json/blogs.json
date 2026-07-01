@@ -1,0 +1,76 @@
+{
+  "categories": {
+    "stars": {
+      "title": "Stars",
+      "description": "Weird facts and untold stories about famous personalities.",
+      "posts": [
+        {
+          "slug": "sunny-leone",
+          "title": "Sunny Leone's Surprisingly Weird Path to Stardom",
+          "excerpt": "From controversial beginnings to becoming one of India's most loved stars — the bizarre twists in her journey.",
+          "image": "https://picsum.photos/id/1011/800/600",
+          "date": "2026-06-15",
+          "readTime": "8 min",
+          "url": "https://weirdhub.site/blogs/stars/sunny-leone/"
+        },
+        {
+          "slug": "deepika-padukone",
+          "title": "Deepika Padukone and the Strange Superstitions She Still Follows",
+          "excerpt": "The global icon reveals odd rituals and pre-fame habits that shaped her incredible career.",
+          "image": "https://picsum.photos/id/1005/800/600",
+          "date": "2026-06-10",
+          "readTime": "6 min",
+          "url": "https://weirdhub.site/blogs/stars/deepika-padukone/"
+        }
+      ]
+    },
+    "places": {
+      "title": "Strange Places",
+      "description": "Mysterious locations and destinations that defy explanation.",
+      "posts": [
+        {
+          "slug": "bermuda-triangle",
+          "title": "The Bermuda Triangle: 5 Weird Theories That Still Haunt Scientists",
+          "excerpt": "Disappearing ships, vanished planes, and the strangest explanations people still believe today.",
+          "image": "https://picsum.photos/id/1016/800/600",
+          "date": "2026-06-20",
+          "readTime": "10 min",
+          "url": "https://weirdhub.site/blogs/places/bermuda-triangle/"
+        },
+        {
+          "slug": "area-51",
+          "title": "Area 51: The Weirdest Secrets Hidden in the Nevada Desert",
+          "excerpt": "Declassified documents, alien rumors, and why this military base continues to fascinate the world.",
+          "image": "https://picsum.photos/id/160/800/600",
+          "date": "2026-06-18",
+          "readTime": "7 min",
+          "url": "https://weirdhub.site/blogs/places/area-51/"
+        }
+      ]
+    },
+    "history": {
+      "title": "Weird History",
+      "description": "Bizarre events and forgotten chapters from our past.",
+      "posts": [
+        {
+          "slug": "voynich-manuscript",
+          "title": "The Voynich Manuscript: History's Most Mysterious Book",
+          "excerpt": "Written in an unknown language with bizarre illustrations — still undeciphered after 600 years.",
+          "image": "https://picsum.photos/id/201/800/600",
+          "date": "2026-06-12",
+          "readTime": "9 min",
+          "url": "https://weirdhub.site/blogs/history/voynich-manuscript/"
+        },
+        {
+          "slug": "dancing-plague",
+          "title": "The Dancing Plague of 1518: When an Entire Town Couldn't Stop Dancing",
+          "excerpt": "Hundreds of people danced themselves to death in one of history's strangest mass psychogenic events.",
+          "image": "https://picsum.photos/id/251/800/600",
+          "date": "2026-06-08",
+          "readTime": "7 min",
+          "url": "https://weirdhub.site/blogs/history/dancing-plague/"
+        }
+      ]
+    }
+  }
+}

@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>404 - Page Not Found | WeirdHub</title>
-
-    <meta name="description" content="The page you're looking for doesn't exist or has been moved. Explore WeirdHub for articles, tutorials, and technology content.">
-
-    <link rel="stylesheet" href="css/404.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | WeirdHub</title>
+  <meta name="description" content="The page you're looking for has vanished into the weird unknown.">
+  <link rel="canonical" href="https://weirdhub.site/404.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/page.css">
+  <meta property="og:title" content="404 - Page Not Found | WeirdHub">
+  <meta property="og:description" content="The page you're looking for has vanished into the weird unknown.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://weirdhub.site/404.html">
 </head>
 <body>
+  <div id="navbar-placeholder"></div>
 
-<div class="noise"></div>
-
-<main class="error-container">
-
-    <p class="status">ERROR 404</p>
-
-    <h1>Page Not Found</h1>
-
-    <p class="description">
-        The page you requested doesn't exist, may have been removed,
-        renamed, or is temporarily unavailable.
-    </p>
-
-    <div class="action-buttons">
-        <a href="/" class="primary-btn">
-            Go Home
-        </a>
-
-        <a href="about.html" class="secondary-btn">
-            About-us
-        </a>
+  <main class="container" style="text-align: center; padding: 4rem 1rem; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    <h1 style="font-size: 6rem; margin: 0; color: var(--accent);">404</h1>
+    <h2 style="margin: 1rem 0 2rem;">Lost in the Weirdness</h2>
+    <p style="max-width: 500px; margin-bottom: 2rem; font-size: 1.1rem;">The page you were looking for seems to have disappeared into another dimension. Don't worry — there's plenty more weird stuff to explore.</p>
+    
+    <a href="https://weirdhub.site/" class="btn btn-primary" style="padding: 0.875rem 2rem; font-size: 1.1rem;">Return to Homepage</a>
+    
+    <div style="margin-top: 3rem;">
+      <p style="color: var(--text-muted);">Or explore our weird categories:</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+        <a href="https://weirdhub.site/blogs/stars/" class="btn" style="background: var(--card-bg);">Stars</a>
+        <a href="https://weirdhub.site/blogs/places/" class="btn" style="background: var(--card-bg);">Places</a>
+        <a href="https://weirdhub.site/blogs/history/" class="btn" style="background: var(--card-bg);">History</a>
+      </div>
     </div>
+  </main>
 
-    <div class="code-box">
-        <span>&lt;/404&gt;</span>
-    </div>
+  <div id="footer-placeholder"></div>
 
-</main>
-
-<footer>
-    © 2026 WeirdHub.site • Explore Technology, Programming & Digital Knowledge
-</footer>
-
+  <script src="/js/components.js"></script>
 </body>
 </html>

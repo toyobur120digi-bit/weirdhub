@@ -1,0 +1,10 @@
+/* TEAM */
+  Developer: Grok by xAI (Starter Template)
+  Contact: weirdhub.site [at] example.com
+  From: Internet
+
+/* SITE */
+  Last update: 2026-07-01
+  Standards: HTML5, CSS3, Vanilla JS
+  Components: Custom semantic, accessible
+  Software: Static site, GitHub Pages ready

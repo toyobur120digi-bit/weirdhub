@@ -1,0 +1,16 @@
+{
+  "name": "WeirdHub",
+  "short_name": "WeirdHub",
+  "description": "Your hub for the world's weirdest facts, strange places, and bizarre history.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#7c3aed",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
