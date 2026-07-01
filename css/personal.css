@@ -168,3 +168,14 @@
     font-size: 2rem;
   }
 }
+
+/* Mobile / Horizontal spacing */
+.personal-hero,
+.girl-hero,
+.girl-content,
+.video-placeholder,
+.ad-placeholder,
+.biodata-box {
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -83,6 +83,7 @@
   gap: 0.75rem;
   margin-top: 2rem;
   flex-wrap: wrap;
+  padding: 0 20px;
 }
 
 .share-buttons .btn {
@@ -94,7 +95,7 @@
 /* Related / back */
 .post-footer-nav {
   margin-top: 4rem;
-  padding-top: 2rem;
+  padding: 2rem 20px;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
