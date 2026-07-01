@@ -179,3 +179,12 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
+
+.section-image {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border);
+}
