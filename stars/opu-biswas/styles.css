@@ -284,3 +284,37 @@ footer p {
         justify-self: center;
     }
 }
+
+/* ==================== বড় ডাউনলোড বাটনের CSS ==================== */
+.download-section {
+    background-color: #ffffff;
+    padding: 4rem 0;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.big-download-btn {
+    display: inline-block;
+    background-color: #E3F2FD;
+    color: #1a365d;
+    font-size: 1.65rem;
+    font-weight: 600;
+    padding: 1.6rem 4rem;
+    border: 2px solid #2c5282;
+    text-decoration: none;
+    text-align: center;
+    /* কোনো বর্ডার রেডিয়াস নেই */
+    /* কোনো হোভার ইফেক্ট নেই */
+    /* কোনো এনিমেশন নেই */
+}
+
+/* মোবাইলে বাটন আরেকটু ছোট করা হয়েছে */
+@media (max-width: 600px) {
+    .big-download-btn {
+        font-size: 1.35rem;
+        padding: 1.4rem 2.5rem;
+        width: 90%;
+        max-width: 380px;
+    }
+}
